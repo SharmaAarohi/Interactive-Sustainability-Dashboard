@@ -1,7 +1,7 @@
-import express from 'express';
+import express, { Router } from 'express';
 import { registerUser, loginUser } from '../controllers/authController';
 
-const router = express.Router();
+const router: Router = express.Router();
 
 // Registration route
 router.post('/register', registerUser);
@@ -9,4 +9,4 @@ router.post('/register', registerUser);
 // Login route
 router.post('/login', loginUser);
 
-export default router;
+export default router;

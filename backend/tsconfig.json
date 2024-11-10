@@ -1,0 +1,15 @@
+// backend/tsconfig.json
+{
+    "compilerOptions": {
+      "target": "ES2017",
+      "module": "commonjs",
+      "strict": true,
+      "esModuleInterop": true,
+      "skipLibCheck": true,
+      "forceConsistentCasingInFileNames": true,
+      "types": ["node"], // Ensure Node types are included
+      "outDir": "./dist" // Optional, specify output directory
+    },
+    "include": ["**/*.ts"],
+    "exclude": ["node_modules"]
+  }
