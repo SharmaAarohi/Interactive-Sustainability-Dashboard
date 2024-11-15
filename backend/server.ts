@@ -1,3 +1,4 @@
+import './config/env';  
 import express from 'express';
 import dotenv from 'dotenv';
 import sequelize from './config/databaseConfig';
@@ -31,3 +32,5 @@ sequelize.sync({ alter: true })
   .catch((error) => {
     console.error('Error connecting to database:', error);
   });
+
+  console.log('JWT_SECRET:', process.env.JWT_SECRET);  // Should output your JWT_SECRET value

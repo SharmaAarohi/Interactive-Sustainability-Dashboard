@@ -1,0 +1,127 @@
+/* [project]/src/styles/dashboard.module.css [client] (css) */
+.dashboard-module__1qL-yq__dashboardContainer {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  min-height: 100vh;
+  background-color: #f8f9fa;
+}
+
+.dashboard-module__1qL-yq__container {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-grow: 1;
+  margin-left: 60px;
+  transition: margin-left .3s;
+}
+
+.dashboard-module__1qL-yq__navbar:hover + .dashboard-module__1qL-yq__container {
+  margin-left: 200px;
+}
+
+.dashboard-module__1qL-yq__title {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  color: #036;
+  font-weight: bold;
+  text-align: center;
+}
+
+.dashboard-module__1qL-yq__formContainer {
+  width: 100%;
+  max-width: 800px;
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px #0000001a;
+  margin-bottom: 2rem;
+}
+
+.dashboard-module__1qL-yq__formContainer input, .dashboard-module__1qL-yq__formContainer button {
+  width: 100%;
+  padding: .75rem;
+  margin-top: 1rem;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+.dashboard-module__1qL-yq__formContainer button {
+  background-color: #28a745;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  transition: background-color .3s;
+}
+
+.dashboard-module__1qL-yq__formContainer button:hover {
+  background-color: #218838;
+}
+
+.dashboard-module__1qL-yq__metrics {
+  width: 100%;
+  max-width: 800px;
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px #0000001a;
+  margin-bottom: 2rem;
+}
+
+.dashboard-module__1qL-yq__exportButtons {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 400px;
+}
+
+.dashboard-module__1qL-yq__exportButtons button {
+  flex: 1;
+  padding: .75rem;
+  margin: .5rem;
+  border-radius: 6px;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color .3s;
+}
+
+.dashboard-module__1qL-yq__exportButtons button:first-child {
+  background-color: #007bff;
+}
+
+.dashboard-module__1qL-yq__exportButtons button:last-child {
+  background-color: #ffc107;
+}
+
+.dashboard-module__1qL-yq__exportButtons button:hover {
+  opacity: .9;
+}
+
+@media (width <= 768px) {
+  .dashboard-module__1qL-yq__container {
+    padding: 1rem;
+    margin-left: 0;
+  }
+
+  .dashboard-module__1qL-yq__title {
+    font-size: 2rem;
+  }
+
+  .dashboard-module__1qL-yq__formContainer, .dashboard-module__1qL-yq__metrics, .dashboard-module__1qL-yq__comparisonContainer {
+    padding: 1.5rem;
+  }
+
+  .dashboard-module__1qL-yq__exportButtons {
+    flex-direction: column;
+    max-width: 100%;
+  }
+
+  .dashboard-module__1qL-yq__exportButtons button {
+    margin: .5rem 0;
+  }
+}
+
+/*# sourceMappingURL=src_styles_dashboard_module_735113.css.map*/

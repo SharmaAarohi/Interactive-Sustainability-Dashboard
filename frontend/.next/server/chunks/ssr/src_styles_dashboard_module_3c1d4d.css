@@ -1,0 +1,4 @@
+/* [project]/src/styles/dashboard.module.css [ssr] (css) */
+.dashboard-module__1qL-yq__dashboardContainer{display:flex}.dashboard-module__1qL-yq__container{padding:2rem;display:flex;flex-direction:column;align-items:center;justify-content:center;flex-grow:1;margin-left:60px;transition:margin-left .3s}.dashboard-module__1qL-yq__navbar:hover+.dashboard-module__1qL-yq__container{margin-left:200px}.dashboard-module__1qL-yq__title{font-size:2rem;margin-bottom:1.5rem;color:#036}.dashboard-module__1qL-yq__metrics,.dashboard-module__1qL-yq__navigation{width:100%;max-width:600px;padding:1.5rem;margin:1rem 0;background-color:#f0f4f8;border-radius:8px;text-align:center}@media (width<=768px){.dashboard-module__1qL-yq__container{padding:1rem;margin-left:0}.dashboard-module__1qL-yq__title{font-size:1.5rem}}
+
+/*# sourceMappingURL=src_styles_dashboard_module_3c1d4d.css.map*/

@@ -14,8 +14,11 @@ const LoginPage: React.FC = () => {
     try {
       const data = await login(email, password);
       if (data.token) {
+        console.log('Token received:', data.token);
         // Store the token, e.g., in localStorage
+        
         localStorage.setItem('token', data.token);
+
         router.push('/dashboard'); // Redirect to dashboard
       }
     } catch (error) {

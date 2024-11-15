@@ -1,0 +1,156 @@
+/* [project]/src/styles/navbar.module.css [client] (css) */
+.navbar-module__HNoFna__navbar {
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 60px;
+  background-color: #fff;
+  transition: width .3s;
+  overflow: hidden;
+  z-index: 1000;
+  color: #1a202c;
+}
+
+.navbar-module__HNoFna__navbar:hover {
+  width: 240px;
+}
+
+.navbar-module__HNoFna__logo {
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.navbar-module__HNoFna__logoImage {
+  width: 40px;
+  height: auto;
+  transition: transform .3s;
+}
+
+.navbar-module__HNoFna__navbar:hover .navbar-module__HNoFna__logoImage {
+  transform: scale(1.5);
+}
+
+.navbar-module__HNoFna__version {
+  margin-left: .5rem;
+  color: #1a202c;
+  font-weight: bold;
+}
+
+.navbar-module__HNoFna__section {
+  margin-top: 1.5rem;
+  padding: 0 1rem;
+}
+
+.navbar-module__HNoFna__section h3 {
+  font-size: .9rem;
+  color: #1a202c;
+  margin-bottom: 1rem;
+  display: none;
+}
+
+.navbar-module__HNoFna__icon {
+  display: flex;
+  align-items: center;
+  color: #1a202c;
+  font-size: 1rem;
+  padding: .8rem 0;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: background-color .3s;
+}
+
+.navbar-module__HNoFna__icon:hover {
+  background-color: #e0e7ff;
+}
+
+.navbar-module__HNoFna__icon span {
+  display: none;
+  margin-left: 10px;
+}
+
+.navbar-module__HNoFna__navbar:hover .navbar-module__HNoFna__section h3, .navbar-module__HNoFna__navbar:hover .navbar-module__HNoFna__icon span {
+  display: inline;
+}
+
+.navbar-module__HNoFna__navbar {
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 60px;
+  background-color: #fff;
+  transition: width .3s;
+  overflow: hidden;
+  z-index: 1000;
+  color: #1a202c;
+}
+
+.navbar-module__HNoFna__navbar:hover {
+  width: 240px;
+}
+
+.navbar-module__HNoFna__logo {
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.navbar-module__HNoFna__logoImage {
+  width: 40px;
+  height: auto;
+  transition: transform .3s;
+}
+
+.navbar-module__HNoFna__navbar:hover .navbar-module__HNoFna__logoImage {
+  transform: scale(1.5);
+}
+
+.navbar-module__HNoFna__version {
+  margin-left: .5rem;
+  color: #1a202c;
+  font-weight: bold;
+}
+
+.navbar-module__HNoFna__section {
+  margin-top: 1.5rem;
+  padding: 0 1rem;
+}
+
+.navbar-module__HNoFna__section h3 {
+  font-size: .9rem;
+  color: #1a202c;
+  margin-bottom: 1rem;
+  display: none;
+}
+
+.navbar-module__HNoFna__icon {
+  display: flex;
+  align-items: center;
+  color: #1a202c;
+  font-size: 1rem;
+  padding: .8rem 0;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: background-color .3s;
+}
+
+.navbar-module__HNoFna__icon:hover {
+  background-color: #e0e7ff;
+}
+
+.navbar-module__HNoFna__icon span {
+  display: none;
+  margin-left: 10px;
+}
+
+.navbar-module__HNoFna__navbar:hover .navbar-module__HNoFna__section h3, .navbar-module__HNoFna__navbar:hover .navbar-module__HNoFna__icon span {
+  display: inline;
+}
+
+/*# sourceMappingURL=src_styles_navbar_module_735113.css.map*/

@@ -1,8 +1,10 @@
-// frontend/src/services/authService.ts
+import fetch from 'node-fetch';
+
+const BASE_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:5000/auth';
 
 export const login = async (email: string, password: string) => {
     try {
-      const response = await fetch('http://localhost:5000/auth/login', { // Add backend URL
+      const response = await fetch(`${BASE_URL}/login`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ email, password }),
@@ -20,4 +22,3 @@ export const login = async (email: string, password: string) => {
       throw error;
     }
   };
-  
