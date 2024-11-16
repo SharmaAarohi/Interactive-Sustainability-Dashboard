@@ -1,21 +1,4 @@
 /* [project]/src/styles/navbar.module.css [client] (css) */
-.navbar-module__HNoFna__navbar {
-  position: fixed;
-  left: 0;
-  top: 0;
-  height: 100%;
-  width: 60px;
-  background-color: #fff;
-  transition: width .3s;
-  overflow: hidden;
-  z-index: 1000;
-  color: #1a202c;
-}
-
-.navbar-module__HNoFna__navbar:hover {
-  width: 240px;
-}
-
 .navbar-module__HNoFna__logo {
   display: flex;
   align-items: center;
@@ -90,7 +73,7 @@
 }
 
 .navbar-module__HNoFna__navbar:hover {
-  width: 240px;
+  width: 200px;
 }
 
 .navbar-module__HNoFna__logo {

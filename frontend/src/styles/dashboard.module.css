@@ -1,12 +1,10 @@
-/* Allows navbar and content to sit side-by-side */
+/* General container for the dashboard */
 .dashboardContainer {
   display: flex;
-
-
   flex-direction: row;
   width: 100%;
   min-height: 100vh;
-  background-color: #f8f9fa;
+  background-color: #f8f9fa; /* Light background for better readability */
 }
 
 /* Main content styling */
@@ -14,94 +12,121 @@
   padding: 2rem;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
   flex-grow: 1;
-  margin-left: 60px; /* Default offset for the collapsed navbar width */
+  margin-left: 60px; /* Offset for collapsed navbar */
   transition: margin-left 0.3s ease;
+  background-color: #ffffff; /* Add white background for contrast */
+  border-radius: 8px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1); /* Subtle shadow for elevation */
 }
 
-/* Only adjust margin when the navbar is hovered */
+/* Adjust container margin when navbar is expanded */
 .navbar:hover + .container {
-  margin-left: 200px; /* Matches expanded width of the navbar */
+  margin-left: 200px;
 }
 
+/* Title for sections */
 .title {
   font-size: 2.5rem;
   margin-bottom: 1.5rem;
-  color: #003366;
-
+  color: #003366; /* Oren blue */
   font-weight: bold;
   text-align: center;
 }
 
-/* .metrics,
-.navigation {
-  width: 100%;
-  max-width: 600px;
-  padding: 1.5rem;
-  margin: 1rem 0;
-  background-color: #f0f4f8;
-  border-radius: 8px;
-  text-align: center;
+/* Top-right buttons (Logout and Export) */
+.topButtons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+  margin-bottom: 1rem;
 }
 
-/* Responsive adjustments */
-/* @media (max-width: 768px) {
-  .container {
-    padding: 1rem;
-    margin-left: 0; /* Removes offset on smaller screens */
-  /* } */
+/* Logout button styling */
+.logoutButton {
+  background-color: #003366; /* Oren blue */
+  color: #ffffff;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
 
-  /* .title {
-    font-size: 1.5rem;
-  }
-} */ 
+.logoutButton:hover {
+  background-color: #1a73e8; /* Light blue on hover */
+}
 
-/* Styles for the input form container */
-.formContainer {
-  width: 100%;
-  max-width: 800px;
-  background-color: #ffffff;
-  padding: 2rem;
-  border-radius: 8px;
-  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+/* Export buttons styling */
+.exportButtons {
+  display: flex;
+  gap: 1rem;
+}
+
+.exportButtons button {
+  background-color: #003366; /* Oren blue */
+  color: #ffffff;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  border: none;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.exportButtons button:hover {
+  background-color: #1a73e8; /* Light blue on hover */
+}
+/* Container for all the forms */
+.formSection {
+  display: flex; /* Arrange forms side-by-side */
+  justify-content: space-between; /* Add space between forms */
+  gap: 1rem; /* Space between each form */
+  width: 100%; /* Ensure the forms stretch across the container */
   margin-bottom: 2rem;
 }
+/* Form container (e.g., InputForm, DeleteDataForm) */
+/* Individual form container */
+.formContainer {
+  flex: 1; /* Allow forms to take equal width */
+  display: flex;
+  flex-direction: column; /* Arrange fields vertically */
+  align-items: stretch; /* Make fields take full width */
+  background-color: #ffffff;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+}
 
+/* Inputs and buttons styling */
 .formContainer input,
-.formContainer button {
-  width: 100%;
+.formContainer button,
+.formContainer select {
+  width: 100%; /* Full width of the container */
   padding: 0.75rem;
   margin-top: 1rem;
   border-radius: 6px;
   border: 1px solid #ccc;
+  font-size: 1rem;
 }
 
 .formContainer button {
-  background-color: #28a745;
-  color: #fff;
+  background-color: #003366; /* Oren blue */
+  color: #ffffff;
   border: none;
   cursor: pointer;
-  transition: background-color 0.3s;
+  transition: background-color 0.3s ease;
+  font-weight: bold;
 }
 
 .formContainer button:hover {
-  background-color: #218838;
+  background-color: #1a73e8; /* Light blue on hover */
 }
 
-/* Metrics section */
-/* .metrics {
-  width: 100%;
-  max-width: 800px;
-  background-color: #ffffff;
-  padding: 2rem;
-  border-radius: 8px;
-  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
-  margin-bottom: 2rem;
-} */
-
-/* Metric Chart container styling */
+/* Metric Chart section */
 .metrics {
   width: 100%;
   max-width: 800px;
@@ -112,54 +137,11 @@
   margin-bottom: 2rem;
 }
 
-
-/* Export buttons styling */
-.exportButtons {
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-  max-width: 400px;
-}
-
-.exportButtons button {
-  flex: 1;
-  padding: 0.75rem;
-  margin: 0.5rem;
-  border-radius: 6px;
-  border: none;
-  color: #fff;
-  cursor: pointer;
-  transition: background-color 0.3s;
-}
-
-.exportButtons button:first-child {
-  background-color: #007bff;
-}
-
-.exportButtons button:last-child {
-  background-color: #ffc107;
-}
-
-.exportButtons button:hover {
-  opacity: 0.9;
-}
-
-/* Style each form container */
-/* .formSection {
-  width: 100%;
-  max-width: 600px;
-  margin: 1rem 0;
-  padding: 1.5rem;
-  background-color: #f9f9f9;
-  border-radius: 8px;
-  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
-} */
-
-/* Responsive adjustments */
+/* Responsive adjustments for smaller screens */
 @media (max-width: 768px) {
   .container {
     padding: 1rem;
-    margin-left: 0;
+    margin-left: 0; /* Remove margin for smaller screens */
   }
 
   .title {
@@ -167,17 +149,23 @@
   }
 
   .formContainer,
-  .metrics,
-  .comparisonContainer {
+  .metrics {
     padding: 1.5rem;
   }
 
-  .exportButtons {
+  .topButtons {
     flex-direction: column;
-    max-width: 100%;
+    align-items: flex-end;
+    gap: 0.5rem;
   }
 
   .exportButtons button {
-    margin: 0.5rem 0;
+    padding: 0.5rem;
+    font-size: 0.9rem;
   }
+}
+
+/* Add consistent spacing between sections */
+.container > * {
+  margin-bottom: 1.5rem;
 }

@@ -1,6 +1,54 @@
 /* [project]/src/styles/login.module.css [client] (css) */
 .login-module__4pxX9G__container {
   display: flex;
+  height: 100vh;
+  align-items: center;
+}
+
+.login-module__4pxX9G__loginForm {
+  width: 40%;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+}
+
+.login-module__4pxX9G__loginForm h1 {
+  color: #036;
+}
+
+.login-module__4pxX9G__loginForm button {
+  background-color: #036;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: .5rem;
+  transition: background-color .3s;
+}
+
+.login-module__4pxX9G__loginForm button:hover {
+  background-color: #1a73e8;
+}
+
+.login-module__4pxX9G__infoContainer {
+  width: 60%;
+  padding: 2rem;
+  background-color: #f4f4f4;
+  text-align: center;
+}
+
+.login-module__4pxX9G__infoContainer img {
+  width: 50%;
+  margin: 1rem auto;
+}
+
+.login-module__4pxX9G__infoContainer a {
+  color: #036;
+  text-decoration: none;
+}
+
+.login-module__4pxX9G__container {
+  display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;

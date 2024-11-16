@@ -384,14 +384,16 @@ const __TURBOPACK__default__export__ = navbar;
 var { r: __turbopack_require__, f: __turbopack_module_context__, i: __turbopack_import__, s: __turbopack_esm__, v: __turbopack_export_value__, n: __turbopack_export_namespace__, c: __turbopack_cache__, M: __turbopack_modules__, l: __turbopack_load__, j: __turbopack_dynamic__, P: __turbopack_resolve_absolute_path__, U: __turbopack_relative_url__, R: __turbopack_resolve_module_id_path__, b: __turbopack_worker_blob_url__, g: global, __dirname, t: require } = __turbopack_context__;
 {
 __turbopack_export_value__({
-  "comparisonContainer": "dashboard-module__1qL-yq__comparisonContainer",
   "container": "dashboard-module__1qL-yq__container",
   "dashboardContainer": "dashboard-module__1qL-yq__dashboardContainer",
   "exportButtons": "dashboard-module__1qL-yq__exportButtons",
   "formContainer": "dashboard-module__1qL-yq__formContainer",
+  "formSection": "dashboard-module__1qL-yq__formSection",
+  "logoutButton": "dashboard-module__1qL-yq__logoutButton",
   "metrics": "dashboard-module__1qL-yq__metrics",
   "navbar": "dashboard-module__1qL-yq__navbar",
   "title": "dashboard-module__1qL-yq__title",
+  "topButtons": "dashboard-module__1qL-yq__topButtons",
 });
 }}),
 "[externals]/ [external] (fs, cjs)": (function(__turbopack_context__) {
@@ -1258,117 +1260,12 @@ const __TURBOPACK__default__export__ = ExportButtons;
 
 var { r: __turbopack_require__, f: __turbopack_module_context__, i: __turbopack_import__, s: __turbopack_esm__, v: __turbopack_export_value__, n: __turbopack_export_namespace__, c: __turbopack_cache__, M: __turbopack_modules__, l: __turbopack_load__, j: __turbopack_dynamic__, P: __turbopack_resolve_absolute_path__, U: __turbopack_relative_url__, R: __turbopack_resolve_module_id_path__, b: __turbopack_worker_blob_url__, g: global, __dirname, x: __turbopack_external_require__, y: __turbopack_external_import__, z: require } = __turbopack_context__;
 {
-// import Navbar from '../components/navbar'; 
-// import styles from '../styles/dashboard.module.css';
-// import Link from 'next/link';
-// import { useRouter } from 'next/router';
-// import React, { useEffect, useState } from 'react';
-// import InputForm from '../components/InputForm';
-// import MetricChart from '../components/MetricChart';
-// // import Comparison from '../components/Comparison';
-// import ExportButtons from '../components/ExportButtons';
-// // Define a type for the metric data
-// interface MetricData {
-//   year: string;
-//   month: string;
-//   carbonEmissions: number;
-//   waterUsage: number;
-//   wasteGenerated: number;
-// }
-// const DashboardPage: React.FC = () => {
-//   const router = useRouter();
-//   const [metrics, setMetrics] = useState<MetricData[]>([]); // State for storing user metrics
-//   const [isAuthenticated, setIsAuthenticated] = useState(false);
-//   // useEffect(() => {
-//   //   const token = localStorage.getItem('token');
-//   //   console.log('Token on dashboard load:', token); // Log to verify token presence
-//   //   if (!token) {
-//   //     router.push('/login'); // Redirect if no token is present
-//   //   }
-//   // }, [router]);
-//   useEffect(() => {
-//     const token = localStorage.getItem('token');
-//     if (!token) {
-//       router.push('/login');
-//     } else {
-//       setIsAuthenticated(true);
-//       // Load persisted data from localStorage or API if available
-//       const savedMetrics = localStorage.getItem('metrics');
-//       if (savedMetrics) setMetrics(JSON.parse(savedMetrics));
-//     }
-//   }, [router]);
-//     // Optional: Verify token by making a request to the protected backend route
-//   //   fetch('http://localhost:5000/auth/dashboard', {
-//   //     method: 'GET',
-//   //     headers: {
-//   //       Authorization: `Bearer ${token}`,
-//   //     },
-//   //   })
-//   //     .then((response) => {
-//   //       if (!response.ok) {
-//   //         throw new Error('Token is invalid');
-//   //       }
-//   //       setIsAuthenticated(true);
-//   //     })
-//   //     .catch((error) => {
-//   //       console.error(error);
-//   //       localStorage.removeItem('token');
-//   //       router.push('/login');
-//   //     });
-//   // }, [router]);
-//   // if (!isAuthenticated) {
-//   //   return <p>Loading...</p>; // Display a loading message until authentication is verified
-//   // }
-//   // Function to handle form data submission
-//   const handleFormSubmit = (newData: MetricData) => {
-//     const updatedMetrics = [...metrics, newData];
-//     setMetrics(updatedMetrics);
-//     localStorage.setItem('metrics', JSON.stringify(updatedMetrics));
-//   };
-//   const handleDeleteData = (start: string, end: string) => {
-//     const updatedMetrics = metrics.filter((metric) => {
-//       const metricDate = `${metric.year}-${metric.month}`;
-//       return metricDate < start || metricDate > end;
-//     });
-//     setMetrics(updatedMetrics);
-//     localStorage.setItem('metrics', JSON.stringify(updatedMetrics));
-//   };
-//   const handleFilterData = (start: string, end: string) => {
-//     const filteredMetrics = metrics.filter((metric) => {
-//       const metricDate = `${metric.year}-${metric.month}`;
-//       return metricDate >= start && metricDate <= end;
-//     });
-//     setFilteredMetrics(filteredMetrics);
-//   };  
-//   return (
-//     <div className={styles.dashboardContainer}>
-//       <Navbar />
-//       <div className={styles.container}>
-//         <InputForm onSubmit={handleFormSubmit} />
-//         <div className={styles.metrics}>
-//           <MetricChart metrics={metrics} />
-//         </div>
-//         {/* <Comparison metrics={metrics} /> */}
-//         <ExportButtons metrics={metrics} />
-//         <div className={styles.navigation}>
-//           <Link href="/login">
-//             <button onClick={() => localStorage.removeItem('token')}>
-//               Logout
-//             </button>
-//           </Link>
-//         </div>
-//       </div>
-//     </div>
-//   );
-// };
-// export default DashboardPage;
 __turbopack_esm__({
     "default": (()=>__TURBOPACK__default__export__)
 });
 var __TURBOPACK__imported__module__$5b$externals$5d2f$__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__ = __turbopack_import__("[externals]/ [external] (react/jsx-dev-runtime, cjs)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$navbar$2e$tsx__$5b$ssr$5d$__$28$ecmascript$29$__ = __turbopack_import__("[project]/src/components/navbar.tsx [ssr] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$styles$2f$dashboard$2e$module$2e$css__$5b$ssr$5d$__$28$css__module$29$__ = __turbopack_import__("[project]/src/styles/dashboard.module.css [ssr] (css module)");
-var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$link$2e$js__$5b$ssr$5d$__$28$ecmascript$29$__ = __turbopack_import__("[project]/node_modules/next/link.js [ssr] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$router$2e$js__$5b$ssr$5d$__$28$ecmascript$29$__ = __turbopack_import__("[project]/node_modules/next/router.js [ssr] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$externals$5d2f$__$5b$external$5d$__$28$react$2c$__cjs$29$__ = __turbopack_import__("[externals]/ [external] (react, cjs)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$DeleteDataForm$2e$tsx__$5b$ssr$5d$__$28$ecmascript$29$__ = __turbopack_import__("[project]/src/components/DeleteDataForm.tsx [ssr] (ecmascript)");
@@ -1386,20 +1283,14 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ExportB
 ;
 ;
 ;
-;
 const DashboardPage = ()=>{
     const router = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$router$2e$js__$5b$ssr$5d$__$28$ecmascript$29$__["useRouter"])();
     const [metrics, setMetrics] = (0, __TURBOPACK__imported__module__$5b$externals$5d2f$__$5b$external$5d$__$28$react$2c$__cjs$29$__["useState"])([]);
     const [filteredMetrics, setFilteredMetrics] = (0, __TURBOPACK__imported__module__$5b$externals$5d2f$__$5b$external$5d$__$28$react$2c$__cjs$29$__["useState"])([]);
-    const [isAuthenticated, setIsAuthenticated] = (0, __TURBOPACK__imported__module__$5b$externals$5d2f$__$5b$external$5d$__$28$react$2c$__cjs$29$__["useState"])(false);
     (0, __TURBOPACK__imported__module__$5b$externals$5d2f$__$5b$external$5d$__$28$react$2c$__cjs$29$__["useEffect"])(()=>{
         const token = localStorage.getItem('token');
         if (!token) {
-            router.push('/login');
-        } else {
-            setIsAuthenticated(true);
-            const savedMetrics = localStorage.getItem('metrics');
-            if (savedMetrics) setMetrics(JSON.parse(savedMetrics));
+            router.push('/login'); // Redirect if not logged in
         }
     }, [
         router
@@ -1432,38 +1323,103 @@ const DashboardPage = ()=>{
         setMetrics([]);
         localStorage.removeItem('metrics'); // Clear all metrics from localStorage
     };
+    // return (
+    //   <div className={styles.dashboardContainer}>
+    //     <Navbar />
+    //     <div className={styles.container}>
+    //       <div className={styles.topButtons}>
+    //         <button
+    //           onClick={() => {
+    //             localStorage.removeItem('token');
+    //             router.push('/login'); // Redirect to login page
+    //           }}
+    //           className={styles.logoutButton}
+    //         >
+    //           Logout
+    //         </button>
+    //         <ExportButtons metrics={metrics} />
+    //       </div>
+    //       <InputForm onSubmit={handleFormSubmit} />
+    //       <DeleteDataForm onDelete={handleDeleteData} onDeleteAll={handleDeleteAllData} />
+    //       <ViewRangeForm onFilter={handleFilterData} />
+    //       <div className={styles.metrics}>
+    //         <MetricChart metrics={filteredMetrics.length > 0 ? filteredMetrics : metrics} />
+    //       </div>
+    //     </div>
+    //   </div>
+    // );
+    // };
+    // export default DashboardPage;
+    // Inside dashboard.tsx
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("div", {
         className: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$styles$2f$dashboard$2e$module$2e$css__$5b$ssr$5d$__$28$css__module$29$__["default"].dashboardContainer,
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$navbar$2e$tsx__$5b$ssr$5d$__$28$ecmascript$29$__["default"], {}, void 0, false, {
                 fileName: "[project]/src/pages/dashboard.tsx",
-                lineNumber: 182,
-                columnNumber: 7
+                lineNumber: 86,
+                columnNumber: 5
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("div", {
                 className: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$styles$2f$dashboard$2e$module$2e$css__$5b$ssr$5d$__$28$css__module$29$__["default"].container,
                 children: [
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$InputForm$2e$tsx__$5b$ssr$5d$__$28$ecmascript$29$__["default"], {
-                        onSubmit: handleFormSubmit
-                    }, void 0, false, {
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("div", {
+                        className: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$styles$2f$dashboard$2e$module$2e$css__$5b$ssr$5d$__$28$css__module$29$__["default"].topButtons,
+                        children: [
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ExportButtons$2e$tsx__$5b$ssr$5d$__$28$ecmascript$29$__["default"], {
+                                metrics: metrics
+                            }, void 0, false, {
+                                fileName: "[project]/src/pages/dashboard.tsx",
+                                lineNumber: 89,
+                                columnNumber: 7
+                            }, this),
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("button", {
+                                onClick: ()=>{
+                                    localStorage.removeItem('token');
+                                    router.push('/login'); // Redirect to login page
+                                },
+                                className: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$styles$2f$dashboard$2e$module$2e$css__$5b$ssr$5d$__$28$css__module$29$__["default"].logoutButton,
+                                children: "Logout"
+                            }, void 0, false, {
+                                fileName: "[project]/src/pages/dashboard.tsx",
+                                lineNumber: 90,
+                                columnNumber: 9
+                            }, this)
+                        ]
+                    }, void 0, true, {
                         fileName: "[project]/src/pages/dashboard.tsx",
-                        lineNumber: 184,
-                        columnNumber: 9
+                        lineNumber: 88,
+                        columnNumber: 7
                     }, this),
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$DeleteDataForm$2e$tsx__$5b$ssr$5d$__$28$ecmascript$29$__["default"], {
-                        onDelete: handleDeleteData,
-                        onDeleteAll: handleDeleteAllData
-                    }, void 0, false, {
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("div", {
+                        className: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$styles$2f$dashboard$2e$module$2e$css__$5b$ssr$5d$__$28$css__module$29$__["default"].formSection,
+                        children: [
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$InputForm$2e$tsx__$5b$ssr$5d$__$28$ecmascript$29$__["default"], {
+                                onSubmit: handleFormSubmit
+                            }, void 0, false, {
+                                fileName: "[project]/src/pages/dashboard.tsx",
+                                lineNumber: 104,
+                                columnNumber: 9
+                            }, this),
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$DeleteDataForm$2e$tsx__$5b$ssr$5d$__$28$ecmascript$29$__["default"], {
+                                onDelete: handleDeleteData,
+                                onDeleteAll: handleDeleteAllData
+                            }, void 0, false, {
+                                fileName: "[project]/src/pages/dashboard.tsx",
+                                lineNumber: 105,
+                                columnNumber: 9
+                            }, this),
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ViewRangeForm$2e$tsx__$5b$ssr$5d$__$28$ecmascript$29$__["default"], {
+                                onFilter: handleFilterData
+                            }, void 0, false, {
+                                fileName: "[project]/src/pages/dashboard.tsx",
+                                lineNumber: 106,
+                                columnNumber: 9
+                            }, this)
+                        ]
+                    }, void 0, true, {
                         fileName: "[project]/src/pages/dashboard.tsx",
-                        lineNumber: 187,
-                        columnNumber: 9
-                    }, this),
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ViewRangeForm$2e$tsx__$5b$ssr$5d$__$28$ecmascript$29$__["default"], {
-                        onFilter: handleFilterData
-                    }, void 0, false, {
-                        fileName: "[project]/src/pages/dashboard.tsx",
-                        lineNumber: 188,
-                        columnNumber: 9
+                        lineNumber: 103,
+                        columnNumber: 7
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("div", {
                         className: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$styles$2f$dashboard$2e$module$2e$css__$5b$ssr$5d$__$28$css__module$29$__["default"].metrics,
@@ -1471,54 +1427,25 @@ const DashboardPage = ()=>{
                             metrics: filteredMetrics.length > 0 ? filteredMetrics : metrics
                         }, void 0, false, {
                             fileName: "[project]/src/pages/dashboard.tsx",
-                            lineNumber: 191,
-                            columnNumber: 11
+                            lineNumber: 110,
+                            columnNumber: 9
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/src/pages/dashboard.tsx",
-                        lineNumber: 190,
-                        columnNumber: 9
-                    }, this),
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ExportButtons$2e$tsx__$5b$ssr$5d$__$28$ecmascript$29$__["default"], {
-                        metrics: metrics
-                    }, void 0, false, {
-                        fileName: "[project]/src/pages/dashboard.tsx",
-                        lineNumber: 194,
-                        columnNumber: 9
-                    }, this),
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("div", {
-                        className: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$styles$2f$dashboard$2e$module$2e$css__$5b$ssr$5d$__$28$css__module$29$__["default"].navigation,
-                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$link$2e$js__$5b$ssr$5d$__$28$ecmascript$29$__["default"], {
-                            href: "/login",
-                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("button", {
-                                onClick: ()=>localStorage.removeItem('token'),
-                                children: "Logout"
-                            }, void 0, false, {
-                                fileName: "[project]/src/pages/dashboard.tsx",
-                                lineNumber: 198,
-                                columnNumber: 13
-                            }, this)
-                        }, void 0, false, {
-                            fileName: "[project]/src/pages/dashboard.tsx",
-                            lineNumber: 197,
-                            columnNumber: 11
-                        }, this)
-                    }, void 0, false, {
-                        fileName: "[project]/src/pages/dashboard.tsx",
-                        lineNumber: 196,
-                        columnNumber: 9
+                        lineNumber: 109,
+                        columnNumber: 7
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/pages/dashboard.tsx",
-                lineNumber: 183,
-                columnNumber: 7
+                lineNumber: 87,
+                columnNumber: 5
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/src/pages/dashboard.tsx",
-        lineNumber: 181,
-        columnNumber: 5
+        lineNumber: 85,
+        columnNumber: 3
     }, this);
 };
 const __TURBOPACK__default__export__ = DashboardPage;

@@ -1,21 +1,4 @@
 /* [project]/src/styles/navbar.module.css [client] (css) */
-.navbar-module__HNoFna__navbar {
-  position: fixed;
-  left: 0;
-  top: 0;
-  height: 100%;
-  width: 60px;
-  background-color: #fff;
-  transition: width .3s;
-  overflow: hidden;
-  z-index: 1000;
-  color: #1a202c;
-}
-
-.navbar-module__HNoFna__navbar:hover {
-  width: 240px;
-}
-
 .navbar-module__HNoFna__logo {
   display: flex;
   align-items: center;
@@ -90,7 +73,7 @@
 }
 
 .navbar-module__HNoFna__navbar:hover {
-  width: 240px;
+  width: 200px;
 }
 
 .navbar-module__HNoFna__logo {
@@ -167,11 +150,12 @@
   padding: 2rem;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
   flex-grow: 1;
   margin-left: 60px;
   transition: margin-left .3s;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px #0000001a;
 }
 
 .dashboard-module__1qL-yq__navbar:hover + .dashboard-module__1qL-yq__container {
@@ -186,34 +170,89 @@
   text-align: center;
 }
 
-.dashboard-module__1qL-yq__formContainer {
+.dashboard-module__1qL-yq__topButtons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.dashboard-module__1qL-yq__logoutButton {
+  background-color: #036;
+  color: #fff;
+  padding: .5rem 1rem;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: bold;
+  transition: background-color .3s;
+}
+
+.dashboard-module__1qL-yq__logoutButton:hover {
+  background-color: #1a73e8;
+}
+
+.dashboard-module__1qL-yq__exportButtons {
+  display: flex;
+  gap: 1rem;
+}
+
+.dashboard-module__1qL-yq__exportButtons button {
+  background-color: #036;
+  color: #fff;
+  padding: .5rem 1rem;
+  border-radius: 4px;
+  border: none;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color .3s;
+}
+
+.dashboard-module__1qL-yq__exportButtons button:hover {
+  background-color: #1a73e8;
+}
+
+.dashboard-module__1qL-yq__formSection {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
   width: 100%;
-  max-width: 800px;
-  background-color: #fff;
-  padding: 2rem;
-  border-radius: 8px;
-  box-shadow: 0 4px 12px #0000001a;
   margin-bottom: 2rem;
 }
 
-.dashboard-module__1qL-yq__formContainer input, .dashboard-module__1qL-yq__formContainer button {
+.dashboard-module__1qL-yq__formContainer {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  background-color: #fff;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px #0000001a;
+}
+
+.dashboard-module__1qL-yq__formContainer input, .dashboard-module__1qL-yq__formContainer button, .dashboard-module__1qL-yq__formContainer select {
   width: 100%;
   padding: .75rem;
   margin-top: 1rem;
   border-radius: 6px;
   border: 1px solid #ccc;
+  font-size: 1rem;
 }
 
 .dashboard-module__1qL-yq__formContainer button {
-  background-color: #28a745;
+  background-color: #036;
   color: #fff;
   border: none;
   cursor: pointer;
   transition: background-color .3s;
+  font-weight: bold;
 }
 
 .dashboard-module__1qL-yq__formContainer button:hover {
-  background-color: #218838;
+  background-color: #1a73e8;
 }
 
 .dashboard-module__1qL-yq__metrics {
@@ -226,36 +265,6 @@
   margin-bottom: 2rem;
 }
 
-.dashboard-module__1qL-yq__exportButtons {
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-  max-width: 400px;
-}
-
-.dashboard-module__1qL-yq__exportButtons button {
-  flex: 1;
-  padding: .75rem;
-  margin: .5rem;
-  border-radius: 6px;
-  border: none;
-  color: #fff;
-  cursor: pointer;
-  transition: background-color .3s;
-}
-
-.dashboard-module__1qL-yq__exportButtons button:first-child {
-  background-color: #007bff;
-}
-
-.dashboard-module__1qL-yq__exportButtons button:last-child {
-  background-color: #ffc107;
-}
-
-.dashboard-module__1qL-yq__exportButtons button:hover {
-  opacity: .9;
-}
-
 @media (width <= 768px) {
   .dashboard-module__1qL-yq__container {
     padding: 1rem;
@@ -266,18 +275,24 @@
     font-size: 2rem;
   }
 
-  .dashboard-module__1qL-yq__formContainer, .dashboard-module__1qL-yq__metrics, .dashboard-module__1qL-yq__comparisonContainer {
+  .dashboard-module__1qL-yq__formContainer, .dashboard-module__1qL-yq__metrics {
     padding: 1.5rem;
   }
 
-  .dashboard-module__1qL-yq__exportButtons {
+  .dashboard-module__1qL-yq__topButtons {
     flex-direction: column;
-    max-width: 100%;
+    align-items: flex-end;
+    gap: .5rem;
   }
 
   .dashboard-module__1qL-yq__exportButtons button {
-    margin: .5rem 0;
+    padding: .5rem;
+    font-size: .9rem;
   }
+}
+
+.dashboard-module__1qL-yq__container > * {
+  margin-bottom: 1.5rem;
 }
 
 
