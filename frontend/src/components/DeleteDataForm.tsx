@@ -104,7 +104,7 @@ const DeleteDataForm: React.FC<DeleteDataFormProps> = ({ onDelete, onDeleteAll }
           onChange={(e) => setStartYear(e.target.value)}
           required
         />
-
+        <p></p>
         <select value={endMonth} onChange={(e) => setEndMonth(e.target.value)} required>
           <option value="">End Month</option>
           {months.map((m) => (
@@ -118,10 +118,10 @@ const DeleteDataForm: React.FC<DeleteDataFormProps> = ({ onDelete, onDeleteAll }
           onChange={(e) => setEndYear(e.target.value)}
           required
         />
-
+        <p></p>
         <button type="submit">Delete Data</button>
       </form>
-
+      <p></p>
       {/* Add a separate button to remove all data */}
       <button onClick={onDeleteAll} style={{ marginTop: '1rem', backgroundColor: 'red', color: 'white' }}>
         Remove All Data

@@ -66,318 +66,125 @@ __turbopack_export_value__({
 
 var { r: __turbopack_require__, f: __turbopack_module_context__, i: __turbopack_import__, s: __turbopack_esm__, v: __turbopack_export_value__, n: __turbopack_export_namespace__, c: __turbopack_cache__, M: __turbopack_modules__, l: __turbopack_load__, j: __turbopack_dynamic__, P: __turbopack_resolve_absolute_path__, U: __turbopack_relative_url__, R: __turbopack_resolve_module_id_path__, b: __turbopack_worker_blob_url__, g: global, __dirname, x: __turbopack_external_require__, y: __turbopack_external_import__, z: require } = __turbopack_context__;
 {
+// import React from 'react';
+// import Link from 'next/link';
+// import styles from '../styles/navbar.module.css';
+// const navbar: React.FC = () => {
+//   return (
+//     <div className={styles.navbar}>
+//       <div className={styles.logo}>
+//         <img src="/img/oren-logo.jpg" alt="Oren Logo" className={styles.logoImage} /> {/* Use your logo image */}
+//         <span className={styles.version}>v1.0.0</span>
+//       </div>
+//       <div className={styles.section}>
+//         <h3>CSO DEV COMPANY</h3>
+//         <Link href="/dashboard"><div className={styles.icon}>🏠<span> Dashboard</span></div></Link>
+//         <Link href="/reports"><div className={styles.icon}>📄<span> Reports</span></div></Link>
+//         <Link href="/scope3"><div className={styles.icon}>👥<span> Scope 3</span></div></Link>
+//         <Link href="/goals"><div className={styles.icon}>🎯<span> Goals</span></div></Link>
+//       </div>
+//       <div className={styles.section}>
+//         <h3>SUPPLY CHAIN</h3>
+//         <Link href="/supply-dashboard"><div className={styles.icon}>🏢<span> Dashboard</span></div></Link>
+//         <Link href="/assessments"><div className={styles.icon}>📊<span> Assessments</span></div></Link>
+//       </div>
+//       <div className={styles.section}>
+//         <h3>SETTINGS</h3>
+//         <Link href="/preferences"><div className={styles.icon}>⚙<span> Preferences</span></div></Link>
+//         <Link href="/user-management"><div className={styles.icon}>📄<span> User Management</span></div></Link>
+//         <Link href="/faqs"><div className={styles.icon}>❓<span> FAQs</span></div></Link>
+//       </div>
+//     </div>
+//   );
+// };
+// export default navbar;
 __turbopack_esm__({
     "default": (()=>__TURBOPACK__default__export__)
 });
 var __TURBOPACK__imported__module__$5b$externals$5d2f$__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__ = __turbopack_import__("[externals]/ [external] (react/jsx-dev-runtime, cjs)");
-var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$link$2e$js__$5b$ssr$5d$__$28$ecmascript$29$__ = __turbopack_import__("[project]/node_modules/next/link.js [ssr] (ecmascript)");
-var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$styles$2f$navbar$2e$module$2e$css__$5b$ssr$5d$__$28$css__module$29$__ = __turbopack_import__("[project]/src/styles/navbar.module.css [ssr] (css module)");
+var __TURBOPACK__imported__module__$5b$externals$5d2f$__$5b$external$5d$__$28$jspdf$2c$__cjs$29$__ = __turbopack_import__("[externals]/ [external] (jspdf, cjs)");
+var __TURBOPACK__imported__module__$5b$externals$5d2f$__$5b$external$5d$__$28$jspdf$2d$autotable$2c$__cjs$29$__ = __turbopack_import__("[externals]/ [external] (jspdf-autotable, cjs)");
 ;
 ;
 ;
-const navbar = ()=>{
+const ExportButtons = ({ metrics })=>{
+    const exportToCSV = ()=>{
+        const headers = [
+            "Year",
+            "Carbon Emissions",
+            "Water Usage",
+            "Waste Generated"
+        ];
+        const rows = metrics.map(({ year, carbonEmissions, waterUsage, wasteGenerated })=>[
+                year,
+                carbonEmissions,
+                waterUsage,
+                wasteGenerated
+            ]);
+        const csvContent = [
+            headers,
+            ...rows
+        ].map((e)=>e.join(",")).join("\n");
+        const blob = new Blob([
+            csvContent
+        ], {
+            type: "text/csv"
+        });
+        const url = URL.createObjectURL(blob);
+        const link = document.createElement("a");
+        link.href = url;
+        link.download = "sustainability_metrics.csv";
+        link.click();
+    };
+    const exportToPDF = ()=>{
+        const doc = new __TURBOPACK__imported__module__$5b$externals$5d2f$__$5b$external$5d$__$28$jspdf$2c$__cjs$29$__["default"]();
+        doc.text("Sustainability Metrics", 20, 10);
+        const rows = metrics.map(({ year, carbonEmissions, waterUsage, wasteGenerated })=>[
+                year,
+                carbonEmissions,
+                waterUsage,
+                wasteGenerated
+            ]);
+        doc.autoTable({
+            head: [
+                [
+                    "Year",
+                    "Carbon Emissions",
+                    "Water Usage",
+                    "Waste Generated"
+                ]
+            ],
+            body: rows
+        });
+        doc.save("sustainability_metrics.pdf");
+    };
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("div", {
-        className: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$styles$2f$navbar$2e$module$2e$css__$5b$ssr$5d$__$28$css__module$29$__["default"].navbar,
+        className: "exportButtons",
         children: [
-            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("div", {
-                className: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$styles$2f$navbar$2e$module$2e$css__$5b$ssr$5d$__$28$css__module$29$__["default"].logo,
-                children: [
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("img", {
-                        src: "/img/oren-logo.jpg",
-                        alt: "Oren Logo",
-                        className: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$styles$2f$navbar$2e$module$2e$css__$5b$ssr$5d$__$28$css__module$29$__["default"].logoImage
-                    }, void 0, false, {
-                        fileName: "[project]/src/components/navbar.tsx",
-                        lineNumber: 9,
-                        columnNumber: 9
-                    }, this),
-                    " ",
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("span", {
-                        className: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$styles$2f$navbar$2e$module$2e$css__$5b$ssr$5d$__$28$css__module$29$__["default"].version,
-                        children: "v1.0.0"
-                    }, void 0, false, {
-                        fileName: "[project]/src/components/navbar.tsx",
-                        lineNumber: 10,
-                        columnNumber: 9
-                    }, this)
-                ]
-            }, void 0, true, {
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("button", {
+                onClick: exportToCSV,
+                children: "Export as CSV"
+            }, void 0, false, {
                 fileName: "[project]/src/components/navbar.tsx",
-                lineNumber: 8,
+                lineNumber: 79,
                 columnNumber: 7
             }, this),
-            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("div", {
-                className: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$styles$2f$navbar$2e$module$2e$css__$5b$ssr$5d$__$28$css__module$29$__["default"].section,
-                children: [
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("h3", {
-                        children: "CSO DEV COMPANY"
-                    }, void 0, false, {
-                        fileName: "[project]/src/components/navbar.tsx",
-                        lineNumber: 14,
-                        columnNumber: 9
-                    }, this),
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$link$2e$js__$5b$ssr$5d$__$28$ecmascript$29$__["default"], {
-                        href: "/dashboard",
-                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("div", {
-                            className: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$styles$2f$navbar$2e$module$2e$css__$5b$ssr$5d$__$28$css__module$29$__["default"].icon,
-                            children: [
-                                "🏠",
-                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("span", {
-                                    children: " Dashboard"
-                                }, void 0, false, {
-                                    fileName: "[project]/src/components/navbar.tsx",
-                                    lineNumber: 15,
-                                    columnNumber: 64
-                                }, this)
-                            ]
-                        }, void 0, true, {
-                            fileName: "[project]/src/components/navbar.tsx",
-                            lineNumber: 15,
-                            columnNumber: 33
-                        }, this)
-                    }, void 0, false, {
-                        fileName: "[project]/src/components/navbar.tsx",
-                        lineNumber: 15,
-                        columnNumber: 9
-                    }, this),
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$link$2e$js__$5b$ssr$5d$__$28$ecmascript$29$__["default"], {
-                        href: "/reports",
-                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("div", {
-                            className: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$styles$2f$navbar$2e$module$2e$css__$5b$ssr$5d$__$28$css__module$29$__["default"].icon,
-                            children: [
-                                "📄",
-                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("span", {
-                                    children: " Reports"
-                                }, void 0, false, {
-                                    fileName: "[project]/src/components/navbar.tsx",
-                                    lineNumber: 16,
-                                    columnNumber: 62
-                                }, this)
-                            ]
-                        }, void 0, true, {
-                            fileName: "[project]/src/components/navbar.tsx",
-                            lineNumber: 16,
-                            columnNumber: 31
-                        }, this)
-                    }, void 0, false, {
-                        fileName: "[project]/src/components/navbar.tsx",
-                        lineNumber: 16,
-                        columnNumber: 9
-                    }, this),
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$link$2e$js__$5b$ssr$5d$__$28$ecmascript$29$__["default"], {
-                        href: "/scope3",
-                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("div", {
-                            className: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$styles$2f$navbar$2e$module$2e$css__$5b$ssr$5d$__$28$css__module$29$__["default"].icon,
-                            children: [
-                                "👥",
-                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("span", {
-                                    children: " Scope 3"
-                                }, void 0, false, {
-                                    fileName: "[project]/src/components/navbar.tsx",
-                                    lineNumber: 17,
-                                    columnNumber: 61
-                                }, this)
-                            ]
-                        }, void 0, true, {
-                            fileName: "[project]/src/components/navbar.tsx",
-                            lineNumber: 17,
-                            columnNumber: 30
-                        }, this)
-                    }, void 0, false, {
-                        fileName: "[project]/src/components/navbar.tsx",
-                        lineNumber: 17,
-                        columnNumber: 9
-                    }, this),
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$link$2e$js__$5b$ssr$5d$__$28$ecmascript$29$__["default"], {
-                        href: "/goals",
-                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("div", {
-                            className: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$styles$2f$navbar$2e$module$2e$css__$5b$ssr$5d$__$28$css__module$29$__["default"].icon,
-                            children: [
-                                "🎯",
-                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("span", {
-                                    children: " Goals"
-                                }, void 0, false, {
-                                    fileName: "[project]/src/components/navbar.tsx",
-                                    lineNumber: 18,
-                                    columnNumber: 60
-                                }, this)
-                            ]
-                        }, void 0, true, {
-                            fileName: "[project]/src/components/navbar.tsx",
-                            lineNumber: 18,
-                            columnNumber: 29
-                        }, this)
-                    }, void 0, false, {
-                        fileName: "[project]/src/components/navbar.tsx",
-                        lineNumber: 18,
-                        columnNumber: 9
-                    }, this)
-                ]
-            }, void 0, true, {
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("button", {
+                onClick: exportToPDF,
+                children: "Export as PDF"
+            }, void 0, false, {
                 fileName: "[project]/src/components/navbar.tsx",
-                lineNumber: 13,
-                columnNumber: 7
-            }, this),
-            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("div", {
-                className: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$styles$2f$navbar$2e$module$2e$css__$5b$ssr$5d$__$28$css__module$29$__["default"].section,
-                children: [
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("h3", {
-                        children: "SUPPLY CHAIN"
-                    }, void 0, false, {
-                        fileName: "[project]/src/components/navbar.tsx",
-                        lineNumber: 22,
-                        columnNumber: 9
-                    }, this),
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$link$2e$js__$5b$ssr$5d$__$28$ecmascript$29$__["default"], {
-                        href: "/supply-dashboard",
-                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("div", {
-                            className: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$styles$2f$navbar$2e$module$2e$css__$5b$ssr$5d$__$28$css__module$29$__["default"].icon,
-                            children: [
-                                "🏢",
-                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("span", {
-                                    children: " Dashboard"
-                                }, void 0, false, {
-                                    fileName: "[project]/src/components/navbar.tsx",
-                                    lineNumber: 23,
-                                    columnNumber: 71
-                                }, this)
-                            ]
-                        }, void 0, true, {
-                            fileName: "[project]/src/components/navbar.tsx",
-                            lineNumber: 23,
-                            columnNumber: 40
-                        }, this)
-                    }, void 0, false, {
-                        fileName: "[project]/src/components/navbar.tsx",
-                        lineNumber: 23,
-                        columnNumber: 9
-                    }, this),
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$link$2e$js__$5b$ssr$5d$__$28$ecmascript$29$__["default"], {
-                        href: "/assessments",
-                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("div", {
-                            className: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$styles$2f$navbar$2e$module$2e$css__$5b$ssr$5d$__$28$css__module$29$__["default"].icon,
-                            children: [
-                                "📊",
-                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("span", {
-                                    children: " Assessments"
-                                }, void 0, false, {
-                                    fileName: "[project]/src/components/navbar.tsx",
-                                    lineNumber: 24,
-                                    columnNumber: 66
-                                }, this)
-                            ]
-                        }, void 0, true, {
-                            fileName: "[project]/src/components/navbar.tsx",
-                            lineNumber: 24,
-                            columnNumber: 35
-                        }, this)
-                    }, void 0, false, {
-                        fileName: "[project]/src/components/navbar.tsx",
-                        lineNumber: 24,
-                        columnNumber: 9
-                    }, this)
-                ]
-            }, void 0, true, {
-                fileName: "[project]/src/components/navbar.tsx",
-                lineNumber: 21,
-                columnNumber: 7
-            }, this),
-            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("div", {
-                className: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$styles$2f$navbar$2e$module$2e$css__$5b$ssr$5d$__$28$css__module$29$__["default"].section,
-                children: [
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("h3", {
-                        children: "SETTINGS"
-                    }, void 0, false, {
-                        fileName: "[project]/src/components/navbar.tsx",
-                        lineNumber: 28,
-                        columnNumber: 9
-                    }, this),
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$link$2e$js__$5b$ssr$5d$__$28$ecmascript$29$__["default"], {
-                        href: "/preferences",
-                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("div", {
-                            className: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$styles$2f$navbar$2e$module$2e$css__$5b$ssr$5d$__$28$css__module$29$__["default"].icon,
-                            children: [
-                                "⚙",
-                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("span", {
-                                    children: " Preferences"
-                                }, void 0, false, {
-                                    fileName: "[project]/src/components/navbar.tsx",
-                                    lineNumber: 29,
-                                    columnNumber: 65
-                                }, this)
-                            ]
-                        }, void 0, true, {
-                            fileName: "[project]/src/components/navbar.tsx",
-                            lineNumber: 29,
-                            columnNumber: 35
-                        }, this)
-                    }, void 0, false, {
-                        fileName: "[project]/src/components/navbar.tsx",
-                        lineNumber: 29,
-                        columnNumber: 9
-                    }, this),
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$link$2e$js__$5b$ssr$5d$__$28$ecmascript$29$__["default"], {
-                        href: "/user-management",
-                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("div", {
-                            className: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$styles$2f$navbar$2e$module$2e$css__$5b$ssr$5d$__$28$css__module$29$__["default"].icon,
-                            children: [
-                                "📄",
-                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("span", {
-                                    children: " User Management"
-                                }, void 0, false, {
-                                    fileName: "[project]/src/components/navbar.tsx",
-                                    lineNumber: 30,
-                                    columnNumber: 70
-                                }, this)
-                            ]
-                        }, void 0, true, {
-                            fileName: "[project]/src/components/navbar.tsx",
-                            lineNumber: 30,
-                            columnNumber: 39
-                        }, this)
-                    }, void 0, false, {
-                        fileName: "[project]/src/components/navbar.tsx",
-                        lineNumber: 30,
-                        columnNumber: 9
-                    }, this),
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$link$2e$js__$5b$ssr$5d$__$28$ecmascript$29$__["default"], {
-                        href: "/faqs",
-                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("div", {
-                            className: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$styles$2f$navbar$2e$module$2e$css__$5b$ssr$5d$__$28$css__module$29$__["default"].icon,
-                            children: [
-                                "❓",
-                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("span", {
-                                    children: " FAQs"
-                                }, void 0, false, {
-                                    fileName: "[project]/src/components/navbar.tsx",
-                                    lineNumber: 31,
-                                    columnNumber: 58
-                                }, this)
-                            ]
-                        }, void 0, true, {
-                            fileName: "[project]/src/components/navbar.tsx",
-                            lineNumber: 31,
-                            columnNumber: 28
-                        }, this)
-                    }, void 0, false, {
-                        fileName: "[project]/src/components/navbar.tsx",
-                        lineNumber: 31,
-                        columnNumber: 9
-                    }, this)
-                ]
-            }, void 0, true, {
-                fileName: "[project]/src/components/navbar.tsx",
-                lineNumber: 27,
+                lineNumber: 80,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/src/components/navbar.tsx",
-        lineNumber: 7,
+        lineNumber: 78,
         columnNumber: 5
     }, this);
 };
-const __TURBOPACK__default__export__ = navbar;
+const __TURBOPACK__default__export__ = ExportButtons;
 }}),
 "[project]/src/styles/dashboard.module.css [ssr] (css module)": ((__turbopack_context__) => {
 
@@ -391,7 +198,6 @@ __turbopack_export_value__({
   "formSection": "dashboard-module__1qL-yq__formSection",
   "logoutButton": "dashboard-module__1qL-yq__logoutButton",
   "metrics": "dashboard-module__1qL-yq__metrics",
-  "navbar": "dashboard-module__1qL-yq__navbar",
   "title": "dashboard-module__1qL-yq__title",
   "topButtons": "dashboard-module__1qL-yq__topButtons",
 });
@@ -599,6 +405,11 @@ const DeleteDataForm = ({ onDelete, onDeleteAll })=>{
                         lineNumber: 100,
                         columnNumber: 9
                     }, this),
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("p", {}, void 0, false, {
+                        fileName: "[project]/src/components/DeleteDataForm.tsx",
+                        lineNumber: 107,
+                        columnNumber: 9
+                    }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("select", {
                         value: endMonth,
                         onChange: (e)=>setEndMonth(e.target.value),
@@ -637,6 +448,11 @@ const DeleteDataForm = ({ onDelete, onDeleteAll })=>{
                         lineNumber: 114,
                         columnNumber: 9
                     }, this),
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("p", {}, void 0, false, {
+                        fileName: "[project]/src/components/DeleteDataForm.tsx",
+                        lineNumber: 121,
+                        columnNumber: 9
+                    }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("button", {
                         type: "submit",
                         children: "Delete Data"
@@ -649,6 +465,11 @@ const DeleteDataForm = ({ onDelete, onDeleteAll })=>{
             }, void 0, true, {
                 fileName: "[project]/src/components/DeleteDataForm.tsx",
                 lineNumber: 92,
+                columnNumber: 7
+            }, this),
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("p", {}, void 0, false, {
+                fileName: "[project]/src/components/DeleteDataForm.tsx",
+                lineNumber: 124,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("button", {
@@ -794,6 +615,11 @@ const ViewRangeForm = ({ onFilter })=>{
                 lineNumber: 38,
                 columnNumber: 7
             }, this),
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("p", {}, void 0, false, {
+                fileName: "[project]/src/components/ViewRangeForm.tsx",
+                lineNumber: 39,
+                columnNumber: 7
+            }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("select", {
                 value: endMonth,
                 onChange: (e)=>setEndMonth(e.target.value),
@@ -830,6 +656,11 @@ const ViewRangeForm = ({ onFilter })=>{
             }, void 0, false, {
                 fileName: "[project]/src/components/ViewRangeForm.tsx",
                 lineNumber: 46,
+                columnNumber: 7
+            }, this),
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("p", {}, void 0, false, {
+                fileName: "[project]/src/components/ViewRangeForm.tsx",
+                lineNumber: 47,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("button", {
@@ -981,37 +812,57 @@ const InputForm = ({ onSubmit })=>{
                 lineNumber: 45,
                 columnNumber: 7
             }, this),
-            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("input", {
-                type: "number",
-                placeholder: "Carbon Emissions (tons)",
-                value: carbonEmissions,
-                onChange: (e)=>setCarbonEmissions(e.target.value),
-                required: true
-            }, void 0, false, {
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("p", {}, void 0, false, {
                 fileName: "[project]/src/components/InputForm.tsx",
                 lineNumber: 46,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("input", {
                 type: "number",
-                placeholder: "Water Usage (liters)",
-                value: waterUsage,
-                onChange: (e)=>setWaterUsage(e.target.value),
+                placeholder: "Carbon Emissions (kilo-tons)",
+                value: carbonEmissions,
+                onChange: (e)=>setCarbonEmissions(e.target.value),
                 required: true
             }, void 0, false, {
                 fileName: "[project]/src/components/InputForm.tsx",
                 lineNumber: 47,
                 columnNumber: 7
             }, this),
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("p", {}, void 0, false, {
+                fileName: "[project]/src/components/InputForm.tsx",
+                lineNumber: 48,
+                columnNumber: 7
+            }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("input", {
                 type: "number",
-                placeholder: "Waste Generated (kg)",
+                placeholder: "Water Usage (million-liters)",
+                value: waterUsage,
+                onChange: (e)=>setWaterUsage(e.target.value),
+                required: true
+            }, void 0, false, {
+                fileName: "[project]/src/components/InputForm.tsx",
+                lineNumber: 49,
+                columnNumber: 7
+            }, this),
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("p", {}, void 0, false, {
+                fileName: "[project]/src/components/InputForm.tsx",
+                lineNumber: 50,
+                columnNumber: 7
+            }, this),
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("input", {
+                type: "number",
+                placeholder: "Waste Generated (tons)",
                 value: wasteGenerated,
                 onChange: (e)=>setWasteGenerated(e.target.value),
                 required: true
             }, void 0, false, {
                 fileName: "[project]/src/components/InputForm.tsx",
-                lineNumber: 48,
+                lineNumber: 51,
+                columnNumber: 7
+            }, this),
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("p", {}, void 0, false, {
+                fileName: "[project]/src/components/InputForm.tsx",
+                lineNumber: 52,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("button", {
@@ -1019,7 +870,7 @@ const InputForm = ({ onSubmit })=>{
                 children: "Add Data"
             }, void 0, false, {
                 fileName: "[project]/src/components/InputForm.tsx",
-                lineNumber: 49,
+                lineNumber: 53,
                 columnNumber: 7
             }, this)
         ]

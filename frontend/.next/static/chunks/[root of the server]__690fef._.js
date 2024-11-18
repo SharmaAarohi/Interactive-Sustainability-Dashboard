@@ -895,7 +895,6 @@ __turbopack_export_value__({
   "formSection": "dashboard-module__1qL-yq__formSection",
   "logoutButton": "dashboard-module__1qL-yq__logoutButton",
   "metrics": "dashboard-module__1qL-yq__metrics",
-  "navbar": "dashboard-module__1qL-yq__navbar",
   "title": "dashboard-module__1qL-yq__title",
   "topButtons": "dashboard-module__1qL-yq__topButtons",
 });
@@ -1073,6 +1072,11 @@ const DeleteDataForm = ({ onDelete, onDeleteAll })=>{
                         lineNumber: 100,
                         columnNumber: 9
                     }, this),
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {}, void 0, false, {
+                        fileName: "[project]/src/components/DeleteDataForm.tsx",
+                        lineNumber: 107,
+                        columnNumber: 9
+                    }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("select", {
                         value: endMonth,
                         onChange: (e)=>setEndMonth(e.target.value),
@@ -1111,6 +1115,11 @@ const DeleteDataForm = ({ onDelete, onDeleteAll })=>{
                         lineNumber: 114,
                         columnNumber: 9
                     }, this),
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {}, void 0, false, {
+                        fileName: "[project]/src/components/DeleteDataForm.tsx",
+                        lineNumber: 121,
+                        columnNumber: 9
+                    }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
                         type: "submit",
                         children: "Delete Data"
@@ -1123,6 +1132,11 @@ const DeleteDataForm = ({ onDelete, onDeleteAll })=>{
             }, void 0, true, {
                 fileName: "[project]/src/components/DeleteDataForm.tsx",
                 lineNumber: 92,
+                columnNumber: 7
+            }, this),
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {}, void 0, false, {
+                fileName: "[project]/src/components/DeleteDataForm.tsx",
+                lineNumber: 124,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -1277,6 +1291,11 @@ const ViewRangeForm = ({ onFilter })=>{
                 lineNumber: 38,
                 columnNumber: 7
             }, this),
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {}, void 0, false, {
+                fileName: "[project]/src/components/ViewRangeForm.tsx",
+                lineNumber: 39,
+                columnNumber: 7
+            }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("select", {
                 value: endMonth,
                 onChange: (e)=>setEndMonth(e.target.value),
@@ -1313,6 +1332,11 @@ const ViewRangeForm = ({ onFilter })=>{
             }, void 0, false, {
                 fileName: "[project]/src/components/ViewRangeForm.tsx",
                 lineNumber: 46,
+                columnNumber: 7
+            }, this),
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {}, void 0, false, {
+                fileName: "[project]/src/components/ViewRangeForm.tsx",
+                lineNumber: 47,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -1473,37 +1497,57 @@ const InputForm = ({ onSubmit })=>{
                 lineNumber: 45,
                 columnNumber: 7
             }, this),
-            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
-                type: "number",
-                placeholder: "Carbon Emissions (tons)",
-                value: carbonEmissions,
-                onChange: (e)=>setCarbonEmissions(e.target.value),
-                required: true
-            }, void 0, false, {
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {}, void 0, false, {
                 fileName: "[project]/src/components/InputForm.tsx",
                 lineNumber: 46,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
                 type: "number",
-                placeholder: "Water Usage (liters)",
-                value: waterUsage,
-                onChange: (e)=>setWaterUsage(e.target.value),
+                placeholder: "Carbon Emissions (kilo-tons)",
+                value: carbonEmissions,
+                onChange: (e)=>setCarbonEmissions(e.target.value),
                 required: true
             }, void 0, false, {
                 fileName: "[project]/src/components/InputForm.tsx",
                 lineNumber: 47,
                 columnNumber: 7
             }, this),
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {}, void 0, false, {
+                fileName: "[project]/src/components/InputForm.tsx",
+                lineNumber: 48,
+                columnNumber: 7
+            }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
                 type: "number",
-                placeholder: "Waste Generated (kg)",
+                placeholder: "Water Usage (million-liters)",
+                value: waterUsage,
+                onChange: (e)=>setWaterUsage(e.target.value),
+                required: true
+            }, void 0, false, {
+                fileName: "[project]/src/components/InputForm.tsx",
+                lineNumber: 49,
+                columnNumber: 7
+            }, this),
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {}, void 0, false, {
+                fileName: "[project]/src/components/InputForm.tsx",
+                lineNumber: 50,
+                columnNumber: 7
+            }, this),
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
+                type: "number",
+                placeholder: "Waste Generated (tons)",
                 value: wasteGenerated,
                 onChange: (e)=>setWasteGenerated(e.target.value),
                 required: true
             }, void 0, false, {
                 fileName: "[project]/src/components/InputForm.tsx",
-                lineNumber: 48,
+                lineNumber: 51,
+                columnNumber: 7
+            }, this),
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {}, void 0, false, {
+                fileName: "[project]/src/components/InputForm.tsx",
+                lineNumber: 52,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -1511,7 +1555,7 @@ const InputForm = ({ onSubmit })=>{
                 children: "Add Data"
             }, void 0, false, {
                 fileName: "[project]/src/components/InputForm.tsx",
-                lineNumber: 49,
+                lineNumber: 53,
                 columnNumber: 7
             }, this)
         ]
@@ -1537,18 +1581,47 @@ var { r: __turbopack_require__, f: __turbopack_module_context__, i: __turbopack_
 {
 // import React from 'react';
 // import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
-// const MetricChart: React.FC<{ metrics: any[] }> = ({ metrics }) => {
+// interface MetricData {
+//   year: string;
+//   month: string;
+//   carbonEmissions: number;
+//   waterUsage: number;
+//   wasteGenerated: number;
+// }
+// // Dummy industry benchmarks for comparison
+// const industryBenchmarks = {
+//   carbonEmissions: 100, // Example value in kilo-tons
+//   waterUsage: 200,      // Example value in million-liters
+//   wasteGenerated: 50    // Example value in tons
+// };
+// // Function to add benchmarks to user data
+// const addBenchmarks = (data: MetricData[]) => {
+//   return data.map((entry) => ({
+//     ...entry,
+//     carbonEmissionsBenchmark: industryBenchmarks.carbonEmissions,
+//     waterUsageBenchmark: industryBenchmarks.waterUsage,
+//     wasteGeneratedBenchmark: industryBenchmarks.wasteGenerated,
+//   }));
+// };
+// const MetricChart: React.FC<{ metrics: MetricData[] }> = ({ metrics }) => {
+//   // Add benchmarks to each data point
+//   const dataWithBenchmarks = addBenchmarks(metrics);
 //   return (
 //     <ResponsiveContainer width="100%" height={400}>
-//       <LineChart data={metrics}>
+//       <LineChart data={dataWithBenchmarks}>
 //         <CartesianGrid strokeDasharray="3 3" />
 //         <XAxis dataKey="year" />
 //         <YAxis />
 //         <Tooltip />
 //         <Legend />
-//         <Line type="monotone" dataKey="carbonEmissions" stroke="#8884d8" />
-//         <Line type="monotone" dataKey="waterUsage" stroke="#82ca9d" />
-//         <Line type="monotone" dataKey="wasteGenerated" stroke="#ffc658" />
+//         {/* User's data lines */}
+//         <Line type="monotone" dataKey="carbonEmissions" stroke="#8884d8" name="Carbon Emissions (User)" />
+//         <Line type="monotone" dataKey="waterUsage" stroke="#82ca9d" name="Water Usage (User)" />
+//         <Line type="monotone" dataKey="wasteGenerated" stroke="#ffc658" name="Waste Generated (User)" />
+//         {/* Industry benchmark lines with dashed styling */}
+//         <Line type="monotone" dataKey="carbonEmissionsBenchmark" stroke="#8884d8" strokeDasharray="5 5" name="Carbon Emissions (Benchmark)" />
+//         <Line type="monotone" dataKey="waterUsageBenchmark" stroke="#82ca9d" strokeDasharray="5 5" name="Water Usage (Benchmark)" />
+//         <Line type="monotone" dataKey="wasteGeneratedBenchmark" stroke="#ffc658" strokeDasharray="5 5" name="Waste Generated (Benchmark)" />
 //       </LineChart>
 //     </ResponsiveContainer>
 //   );
@@ -1572,7 +1645,7 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$recharts$2f$
 const industryBenchmarks = {
     carbonEmissions: 100,
     waterUsage: 200,
-    wasteGenerated: 50 // Example value in kg
+    wasteGenerated: 50 // Example value in tons
 };
 // Function to add benchmarks to user data
 const addBenchmarks = (data)=>{
@@ -1583,6 +1656,76 @@ const addBenchmarks = (data)=>{
             wasteGeneratedBenchmark: industryBenchmarks.wasteGenerated
         }));
 };
+// Custom tooltip component
+const CustomTooltip = ({ active, payload, label })=>{
+    if (active && payload && payload.length) {
+        const { month, year } = payload[0].payload; // Access month and year from the data
+        return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+            style: {
+                backgroundColor: '#c2c8d2',
+                padding: '5px',
+                border: '1px solid #ccc'
+            },
+            children: [
+                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                    children: `Date: ${month}-${year}`
+                }, void 0, false, {
+                    fileName: "[project]/src/components/MetricChart.tsx",
+                    lineNumber: 93,
+                    columnNumber: 9
+                }, this),
+                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                    children: `Carbon Emissions: ${payload[0].value} kilo-tons`
+                }, void 0, false, {
+                    fileName: "[project]/src/components/MetricChart.tsx",
+                    lineNumber: 94,
+                    columnNumber: 9
+                }, this),
+                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                    children: `Water Usage: ${payload[1].value} million-liters`
+                }, void 0, false, {
+                    fileName: "[project]/src/components/MetricChart.tsx",
+                    lineNumber: 95,
+                    columnNumber: 9
+                }, this),
+                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                    children: `Waste Generated: ${payload[2].value} tons`
+                }, void 0, false, {
+                    fileName: "[project]/src/components/MetricChart.tsx",
+                    lineNumber: 96,
+                    columnNumber: 9
+                }, this),
+                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                    children: `Carbon Emissions Benchmark: ${payload[3].value} kilo-tons`
+                }, void 0, false, {
+                    fileName: "[project]/src/components/MetricChart.tsx",
+                    lineNumber: 97,
+                    columnNumber: 9
+                }, this),
+                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                    children: `Water Usage Benchmark: ${payload[4].value} million-liters`
+                }, void 0, false, {
+                    fileName: "[project]/src/components/MetricChart.tsx",
+                    lineNumber: 98,
+                    columnNumber: 9
+                }, this),
+                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                    children: `Waste Generated Benchmark: ${payload[5].value} tons`
+                }, void 0, false, {
+                    fileName: "[project]/src/components/MetricChart.tsx",
+                    lineNumber: 99,
+                    columnNumber: 9
+                }, this)
+            ]
+        }, void 0, true, {
+            fileName: "[project]/src/components/MetricChart.tsx",
+            lineNumber: 92,
+            columnNumber: 7
+        }, this);
+    }
+    return null;
+};
+_c = CustomTooltip;
 const MetricChart = ({ metrics })=>{
     // Add benchmarks to each data point
     const dataWithBenchmarks = addBenchmarks(metrics);
@@ -1596,29 +1739,36 @@ const MetricChart = ({ metrics })=>{
                     strokeDasharray: "3 3"
                 }, void 0, false, {
                     fileName: "[project]/src/components/MetricChart.tsx",
-                    lineNumber: 59,
+                    lineNumber: 113,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$recharts$2f$es6$2f$cartesian$2f$XAxis$2e$js__$5b$client$5d$__$28$ecmascript$29$__["XAxis"], {
                     dataKey: "year"
                 }, void 0, false, {
                     fileName: "[project]/src/components/MetricChart.tsx",
-                    lineNumber: 60,
+                    lineNumber: 114,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$recharts$2f$es6$2f$cartesian$2f$YAxis$2e$js__$5b$client$5d$__$28$ecmascript$29$__["YAxis"], {}, void 0, false, {
                     fileName: "[project]/src/components/MetricChart.tsx",
-                    lineNumber: 61,
+                    lineNumber: 115,
                     columnNumber: 9
                 }, this),
-                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$recharts$2f$es6$2f$component$2f$Tooltip$2e$js__$5b$client$5d$__$28$ecmascript$29$__["Tooltip"], {}, void 0, false, {
+                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$recharts$2f$es6$2f$component$2f$Tooltip$2e$js__$5b$client$5d$__$28$ecmascript$29$__["Tooltip"], {
+                    content: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])(CustomTooltip, {}, void 0, false, {
+                        fileName: "[project]/src/components/MetricChart.tsx",
+                        lineNumber: 116,
+                        columnNumber: 27
+                    }, void 0)
+                }, void 0, false, {
                     fileName: "[project]/src/components/MetricChart.tsx",
-                    lineNumber: 62,
+                    lineNumber: 116,
                     columnNumber: 9
                 }, this),
+                " ",
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$recharts$2f$es6$2f$component$2f$Legend$2e$js__$5b$client$5d$__$28$ecmascript$29$__["Legend"], {}, void 0, false, {
                     fileName: "[project]/src/components/MetricChart.tsx",
-                    lineNumber: 63,
+                    lineNumber: 117,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$recharts$2f$es6$2f$cartesian$2f$Line$2e$js__$5b$client$5d$__$28$ecmascript$29$__["Line"], {
@@ -1628,7 +1778,7 @@ const MetricChart = ({ metrics })=>{
                     name: "Carbon Emissions (User)"
                 }, void 0, false, {
                     fileName: "[project]/src/components/MetricChart.tsx",
-                    lineNumber: 66,
+                    lineNumber: 120,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$recharts$2f$es6$2f$cartesian$2f$Line$2e$js__$5b$client$5d$__$28$ecmascript$29$__["Line"], {
@@ -1638,7 +1788,7 @@ const MetricChart = ({ metrics })=>{
                     name: "Water Usage (User)"
                 }, void 0, false, {
                     fileName: "[project]/src/components/MetricChart.tsx",
-                    lineNumber: 67,
+                    lineNumber: 121,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$recharts$2f$es6$2f$cartesian$2f$Line$2e$js__$5b$client$5d$__$28$ecmascript$29$__["Line"], {
@@ -1648,7 +1798,7 @@ const MetricChart = ({ metrics })=>{
                     name: "Waste Generated (User)"
                 }, void 0, false, {
                     fileName: "[project]/src/components/MetricChart.tsx",
-                    lineNumber: 68,
+                    lineNumber: 122,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$recharts$2f$es6$2f$cartesian$2f$Line$2e$js__$5b$client$5d$__$28$ecmascript$29$__["Line"], {
@@ -1659,7 +1809,7 @@ const MetricChart = ({ metrics })=>{
                     name: "Carbon Emissions (Benchmark)"
                 }, void 0, false, {
                     fileName: "[project]/src/components/MetricChart.tsx",
-                    lineNumber: 71,
+                    lineNumber: 125,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$recharts$2f$es6$2f$cartesian$2f$Line$2e$js__$5b$client$5d$__$28$ecmascript$29$__["Line"], {
@@ -1670,7 +1820,7 @@ const MetricChart = ({ metrics })=>{
                     name: "Water Usage (Benchmark)"
                 }, void 0, false, {
                     fileName: "[project]/src/components/MetricChart.tsx",
-                    lineNumber: 72,
+                    lineNumber: 126,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$recharts$2f$es6$2f$cartesian$2f$Line$2e$js__$5b$client$5d$__$28$ecmascript$29$__["Line"], {
@@ -1681,25 +1831,26 @@ const MetricChart = ({ metrics })=>{
                     name: "Waste Generated (Benchmark)"
                 }, void 0, false, {
                     fileName: "[project]/src/components/MetricChart.tsx",
-                    lineNumber: 73,
+                    lineNumber: 127,
                     columnNumber: 9
                 }, this)
             ]
         }, void 0, true, {
             fileName: "[project]/src/components/MetricChart.tsx",
-            lineNumber: 58,
+            lineNumber: 112,
             columnNumber: 7
         }, this)
     }, void 0, false, {
         fileName: "[project]/src/components/MetricChart.tsx",
-        lineNumber: 57,
+        lineNumber: 111,
         columnNumber: 5
     }, this);
 };
-_c = MetricChart;
+_c1 = MetricChart;
 const __TURBOPACK__default__export__ = MetricChart;
-var _c;
-__turbopack_refresh__.register(_c, "MetricChart");
+var _c, _c1;
+__turbopack_refresh__.register(_c, "CustomTooltip");
+__turbopack_refresh__.register(_c1, "MetricChart");
 if (typeof globalThis.$RefreshHelpers$ === 'object' && globalThis.$RefreshHelpers !== null) {
     __turbopack_refresh__.registerExports(module, globalThis.$RefreshHelpers$);
 }
@@ -1709,10 +1860,78 @@ if (typeof globalThis.$RefreshHelpers$ === 'object' && globalThis.$RefreshHelper
 
 var { r: __turbopack_require__, f: __turbopack_module_context__, i: __turbopack_import__, s: __turbopack_esm__, v: __turbopack_export_value__, n: __turbopack_export_namespace__, c: __turbopack_cache__, M: __turbopack_modules__, l: __turbopack_load__, j: __turbopack_dynamic__, P: __turbopack_resolve_absolute_path__, U: __turbopack_relative_url__, R: __turbopack_resolve_module_id_path__, b: __turbopack_worker_blob_url__, g: global, __dirname, k: __turbopack_refresh__, m: module, z: require } = __turbopack_context__;
 {
+// import React from 'react';
+// const ExportButtons: React.FC<{ metrics: any[] }> = ({ metrics }) => {
+//   const exportToCSV = () => {
+//     const headers = ["Year", "Carbon Emissions", "Water Usage", "Waste Generated"];
+//     const rows = metrics.map(({ year, carbonEmissions, waterUsage, wasteGenerated }) => [year, carbonEmissions, waterUsage, wasteGenerated]);
+//     const csvContent = [headers, ...rows].map(e => e.join(",")).join("\n");
+//     const blob = new Blob([csvContent], { type: "text/csv" });
+//     const url = URL.createObjectURL(blob);
+//     const link = document.createElement("a");
+//     link.href = url;
+//     link.download = "sustainability_metrics.csv";
+//     link.click();
+//   };
+//   return (
+//     <div>
+//       <button onClick={exportToCSV}>Export as CSV</button>
+//       {/* Add PDF export functionality here */}
+//     </div>
+//   );
+// };
+// export default ExportButtons;
+// import React from 'react';
+// import jsPDF from 'jspdf';
+// import 'jspdf-autotable';
+// const ExportButtons: React.FC<{ metrics: any[] }> = ({ metrics }) => {
+//   const exportToCSV = () => {
+//     const headers = ["Year", "Carbon Emissions", "Water Usage", "Waste Generated"];
+//     const rows = metrics.map(({ year, carbonEmissions, waterUsage, wasteGenerated }) => [
+//       year,
+//       carbonEmissions,
+//       waterUsage,
+//       wasteGenerated,
+//     ]);
+//     const csvContent = [headers, ...rows].map(e => e.join(",")).join("\n");
+//     const blob = new Blob([csvContent], { type: "text/csv" });
+//     const url = URL.createObjectURL(blob);
+//     const link = document.createElement("a");
+//     link.href = url;
+//     link.download = "sustainability_metrics.csv";
+//     link.click();
+//   };
+//   const exportToPDF = () => {
+//     const doc = new jsPDF();
+//     doc.text("Sustainability Metrics", 20, 10);
+//     const rows = metrics.map(({ year, carbonEmissions, waterUsage, wasteGenerated }) => [
+//       year,
+//       carbonEmissions,
+//       waterUsage,
+//       wasteGenerated,
+//     ]);
+//     doc.autoTable({
+//       head: [["Year", "Carbon Emissions", "Water Usage", "Waste Generated"]],
+//       body: rows,
+//     });
+//     doc.save("sustainability_metrics.pdf");
+//   };
+//   return (
+//     <div className="exportButtons">
+//       <button onClick={exportToCSV}>Export as CSV</button>
+//       <button onClick={exportToPDF}>Export as PDF</button>
+//     </div>
+//   );
+// };
+// export default ExportButtons;
 __turbopack_esm__({
     "default": (()=>__TURBOPACK__default__export__)
 });
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__ = __turbopack_import__("[project]/node_modules/react/jsx-dev-runtime.js [client] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$jspdf$2f$dist$2f$jspdf$2e$es$2e$min$2e$js__$5b$client$5d$__$28$ecmascript$29$__ = __turbopack_import__("[project]/node_modules/jspdf/dist/jspdf.es.min.js [client] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$jspdf$2d$autotable$2f$dist$2f$jspdf$2e$plugin$2e$autotable$2e$js__$5b$client$5d$__$28$ecmascript$29$__ = __turbopack_import__("[project]/node_modules/jspdf-autotable/dist/jspdf.plugin.autotable.js [client] (ecmascript)");
+;
+;
 ;
 const ExportButtons = ({ metrics })=>{
     const exportToCSV = ()=>{
@@ -1743,18 +1962,51 @@ const ExportButtons = ({ metrics })=>{
         link.download = "sustainability_metrics.csv";
         link.click();
     };
+    const exportToPDF = ()=>{
+        const doc = new __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$jspdf$2f$dist$2f$jspdf$2e$es$2e$min$2e$js__$5b$client$5d$__$28$ecmascript$29$__["default"]();
+        doc.text("Sustainability Metrics", 20, 10);
+        const rows = metrics.map(({ year, carbonEmissions, waterUsage, wasteGenerated })=>[
+                year,
+                carbonEmissions,
+                waterUsage,
+                wasteGenerated
+            ]);
+        doc.autoTable({
+            head: [
+                [
+                    "Year",
+                    "Carbon Emissions",
+                    "Water Usage",
+                    "Waste Generated"
+                ]
+            ],
+            body: rows
+        });
+        doc.save("sustainability_metrics.pdf");
+    };
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
-            onClick: exportToCSV,
-            children: "Export as CSV"
-        }, void 0, false, {
-            fileName: "[project]/src/components/ExportButtons.tsx",
-            lineNumber: 18,
-            columnNumber: 7
-        }, this)
-    }, void 0, false, {
+        className: "exportButtons",
+        children: [
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                onClick: exportToCSV,
+                children: "Export as CSV"
+            }, void 0, false, {
+                fileName: "[project]/src/components/ExportButtons.tsx",
+                lineNumber: 116,
+                columnNumber: 7
+            }, this),
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                onClick: exportToPDF,
+                children: "Export as PDF"
+            }, void 0, false, {
+                fileName: "[project]/src/components/ExportButtons.tsx",
+                lineNumber: 117,
+                columnNumber: 7
+            }, this)
+        ]
+    }, void 0, true, {
         fileName: "[project]/src/components/ExportButtons.tsx",
-        lineNumber: 17,
+        lineNumber: 115,
         columnNumber: 5
     }, this);
 };

@@ -43,9 +43,13 @@ const InputForm: React.FC<{ onSubmit: (data: any) => void }> = ({ onSubmit }) =>
         ))}
       </select>
       <input type="number" placeholder="Year" value={year} onChange={(e) => setYear(e.target.value)} required />
-      <input type="number" placeholder="Carbon Emissions (tons)" value={carbonEmissions} onChange={(e) => setCarbonEmissions(e.target.value)} required />
-      <input type="number" placeholder="Water Usage (liters)" value={waterUsage} onChange={(e) => setWaterUsage(e.target.value)} required />
-      <input type="number" placeholder="Waste Generated (kg)" value={wasteGenerated} onChange={(e) => setWasteGenerated(e.target.value)} required />
+      <p></p>
+      <input type="number" placeholder="Carbon Emissions (kilo-tons)" value={carbonEmissions} onChange={(e) => setCarbonEmissions(e.target.value)} required />
+      <p></p>
+      <input type="number" placeholder="Water Usage (million-liters)" value={waterUsage} onChange={(e) => setWaterUsage(e.target.value)} required />
+      <p></p>
+      <input type="number" placeholder="Waste Generated (tons)" value={wasteGenerated} onChange={(e) => setWasteGenerated(e.target.value)} required />
+      <p></p>
       <button type="submit">Add Data</button>
     </form>
   );

@@ -36,7 +36,7 @@ const ViewRangeForm: React.FC<{ onFilter: (start: string, end: string) => void }
         ))}
       </select>
       <input type="number" placeholder="Start Year" value={startYear} onChange={(e) => setStartYear(e.target.value)} required />
-      
+      <p></p>
       <select value={endMonth} onChange={(e) => setEndMonth(e.target.value)} required>
         <option value="">End Month</option>
         {months.map((m) => (
@@ -44,7 +44,7 @@ const ViewRangeForm: React.FC<{ onFilter: (start: string, end: string) => void }
         ))}
       </select>
       <input type="number" placeholder="End Year" value={endYear} onChange={(e) => setEndYear(e.target.value)} required />
-      
+      <p></p>
       <button type="submit">View Data</button>
     </form>
   );
