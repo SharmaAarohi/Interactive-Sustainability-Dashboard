@@ -1,7 +1,3 @@
-Here's how you can improve your `README.md` to include all the necessary details about your project, including instructions for running it locally and deploying it to Render and Netlify:
-
----
-
 # Interactive Sustainability Dashboard
 
 ## About the Project
