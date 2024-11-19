@@ -4,7 +4,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.loginUser = exports.registerUser = void 0;
-const bcrypt_1 = __importDefault(require("bcrypt"));
+const bcryptjs_1 = __importDefault(require("bcryptjs"));
 const jsonwebtoken_1 = __importDefault(require("jsonwebtoken"));
 const User_1 = __importDefault(require("../models/User"));
 // Registration controller
@@ -19,7 +19,7 @@ const registerUser = async (req, res) => {
             return;
         }
         // Hash password
-        const hashedPassword = await bcrypt_1.default.hash(password, 10);
+        const hashedPassword = await bcryptjs_1.default.hash(password, 10);
         // Create user
         const newUser = await User_1.default.create({ email, password: hashedPassword });
         // Generate JWT
@@ -45,7 +45,7 @@ const loginUser = async (req, res) => {
             return;
         }
         // Verify password
-        const isPasswordValid = await bcrypt_1.default.compare(password, user.password);
+        const isPasswordValid = await bcryptjs_1.default.compare(password, user.password);
         if (!isPasswordValid) {
             res.status(400).json({ message: 'Invalid credentials' });
             return;
