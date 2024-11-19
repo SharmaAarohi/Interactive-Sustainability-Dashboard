@@ -101,7 +101,7 @@ cd Interactive-Sustainability-Dashboard
    ```env
    PORT=5000
    JWT_SECRET=somethingrandom1234
-   DATABASE_URL=postgres://username:password@localhost:5432/sustainability_dashboard
+   DATABASE_URL=postgresql://oren:MHFMhKdxu1MmfYVUxAJuQCvaUcaVyhiD@dpg-csub5utumphs738p82og-a.oregon-postgres.render.com/sustainability_dashboard
    ```
 
 2. **Frontend**: Create a `.env.local` file inside the `frontend/` directory:
