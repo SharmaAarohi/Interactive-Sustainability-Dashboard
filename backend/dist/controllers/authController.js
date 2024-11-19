@@ -10,6 +10,7 @@ const User_1 = __importDefault(require("../models/User"));
 // Registration controller
 const registerUser = async (req, res) => {
     const { email, password } = req.body;
+    console.log('JWT_SECRET:', process.env.JWT_SECRET); // Add this line in registerUser or loginUser
     try {
         // Check if the user already exists
         const existingUser = await User_1.default.findOne({ where: { email } });
@@ -28,6 +29,7 @@ const registerUser = async (req, res) => {
         res.status(201).json({ message: 'User registered successfully', token });
     }
     catch (error) {
+        console.error('Error registering user:', error);
         res.status(500).json({ message: 'Error registering user', error });
     }
 };
@@ -55,6 +57,7 @@ const loginUser = async (req, res) => {
         res.status(200).json({ message: 'Login successful', token });
     }
     catch (error) {
+        console.error('Error logging in:', error);
         res.status(500).json({ message: 'Error logging in', error });
     }
 };
