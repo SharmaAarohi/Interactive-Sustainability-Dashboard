@@ -125,7 +125,7 @@ const RegisterPage = ()=>{
         }
         try {
             // Example register API call
-            const response = await fetch('http://localhost:5000/auth/register', {
+            const response = await fetch(`${("TURBOPACK compile-time value", "https://interactive-sustainability-dashboard-3.onrender.com/auth")}/register`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'

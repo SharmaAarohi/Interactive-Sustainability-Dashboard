@@ -575,6 +575,7 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$ind
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$router$2e$js__$5b$client$5d$__$28$ecmascript$29$__ = __turbopack_import__("[project]/node_modules/next/router.js [client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$styles$2f$register$2e$module$2e$css__$5b$client$5d$__$28$css__module$29$__ = __turbopack_import__("[project]/src/styles/register.module.css [client] (css module)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$link$2e$js__$5b$client$5d$__$28$ecmascript$29$__ = __turbopack_import__("[project]/node_modules/next/link.js [client] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$build$2f$polyfills$2f$process$2e$js__$5b$client$5d$__$28$ecmascript$29$__ = __turbopack_import__("[project]/node_modules/next/dist/build/polyfills/process.js [client] (ecmascript)");
 ;
 var _s = __turbopack_refresh__.signature();
 ;
@@ -596,7 +597,7 @@ const RegisterPage = ()=>{
         }
         try {
             // Example register API call
-            const response = await fetch('http://localhost:5000/auth/register', {
+            const response = await fetch(`${("TURBOPACK compile-time value", "https://interactive-sustainability-dashboard-3.onrender.com/auth")}/register`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'

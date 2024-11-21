@@ -575,7 +575,7 @@ __turbopack_esm__({
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$node$2d$fetch$2f$browser$2e$js__$5b$client$5d$__$28$ecmascript$29$__ = __turbopack_import__("[project]/node_modules/node-fetch/browser.js [client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$build$2f$polyfills$2f$process$2e$js__$5b$client$5d$__$28$ecmascript$29$__ = __turbopack_import__("[project]/node_modules/next/dist/build/polyfills/process.js [client] (ecmascript)");
 ;
-const BASE_URL = __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$build$2f$polyfills$2f$process$2e$js__$5b$client$5d$__$28$ecmascript$29$__["default"].env.NEXT_PUBLIC_API_URL || 'http://localhost:5000/auth';
+const BASE_URL = ("TURBOPACK compile-time value", "https://interactive-sustainability-dashboard-3.onrender.com/auth") || 'https://interactive-sustainability-dashboard-3.onrender.com/auth';
 const login = async (email, password)=>{
     try {
         const response = await (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$node$2d$fetch$2f$browser$2e$js__$5b$client$5d$__$28$ecmascript$29$__["default"])(`${BASE_URL}/login`, {

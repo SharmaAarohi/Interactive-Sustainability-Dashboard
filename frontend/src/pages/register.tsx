@@ -20,7 +20,7 @@ const RegisterPage: React.FC = () => {
   
     try {
       // Example register API call
-      const response = await fetch('http://localhost:5000/auth/register', { // Add backend URL
+      const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/register`, { // Add backend URL
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ email, password }),

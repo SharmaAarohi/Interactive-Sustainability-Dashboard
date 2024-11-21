@@ -113,7 +113,7 @@ __turbopack_esm__({
 });
 var __TURBOPACK__imported__module__$5b$externals$5d2f$__$5b$external$5d$__$28$node$2d$fetch$2c$__cjs$29$__ = __turbopack_import__("[externals]/ [external] (node-fetch, cjs)");
 ;
-const BASE_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:5000/auth';
+const BASE_URL = ("TURBOPACK compile-time value", "https://interactive-sustainability-dashboard-3.onrender.com/auth") || 'https://interactive-sustainability-dashboard-3.onrender.com/auth';
 const login = async (email, password)=>{
     try {
         const response = await (0, __TURBOPACK__imported__module__$5b$externals$5d2f$__$5b$external$5d$__$28$node$2d$fetch$2c$__cjs$29$__["default"])(`${BASE_URL}/login`, {
