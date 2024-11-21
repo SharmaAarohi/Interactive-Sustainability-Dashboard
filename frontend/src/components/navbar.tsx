@@ -1,12 +1,20 @@
 import React from 'react';
 import Link from 'next/link';
 import styles from '../styles/navbar.module.css';
-
+import Image from 'next/image';
 const navbar: React.FC = () => {
   return (
     <div className={styles.navbar}>
       <div className={styles.logo}>
-        <img src="/img/oren-logo.jpg" alt="Oren Logo" className={styles.logoImage} /> {/* Use your logo image */}
+        {/* <Image src="/img/oren-logo.jpg" alt="Oren Logo" width={100} height={50} />; */
+        <Image
+        src="/img/oren-logo.jpg"
+        alt="Oren Logo"
+        className={styles.logoImage}
+        width={40} // Default width when collapsed
+        height={40} // Ensures proportional height
+      />
+        }
         <span className={styles.version}>v1.0.0</span>
       </div>
       

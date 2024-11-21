@@ -93,6 +93,7 @@
   .logoImage {
     width: 40px; /* Default width when navbar is collapsed */
     height: auto;
+    object-fit: contain; /* Ensures the image scales properly */
     transition: transform 0.3s ease; /* Smooth scaling transition */
   }
   

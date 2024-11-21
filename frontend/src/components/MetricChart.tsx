@@ -85,7 +85,13 @@ const addBenchmarks = (data: MetricData[]) => {
 };
 
 // Custom tooltip component
-const CustomTooltip: React.FC<any> = ({ active, payload, label }) => {
+interface TooltipProps {
+  active?: boolean;
+  payload?: any[];
+  label?: string;
+}
+
+const CustomTooltip: React.FC<TooltipProps> = ({ active, payload, label }) => {
   if (active && payload && payload.length) {
     const { month, year } = payload[0].payload; // Access month and year from the data
     return (

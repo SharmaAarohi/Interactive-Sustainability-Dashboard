@@ -14,8 +14,15 @@ const months = [
   { value: '11', label: 'November' },
   { value: '12', label: 'December' }
 ];
+interface FormData {
+  year: string;
+  month: string;
+  carbonEmissions: number;
+  waterUsage: number;
+  wasteGenerated: number;
+}
 
-const InputForm: React.FC<{ onSubmit: (data: any) => void }> = ({ onSubmit }) => {
+const InputForm: React.FC<{ onSubmit: (data: FormData) => void }> = ({ onSubmit }) => {
   const [year, setYear] = useState('');
   const [month, setMonth] = useState('');
   const [carbonEmissions, setCarbonEmissions] = useState('');
