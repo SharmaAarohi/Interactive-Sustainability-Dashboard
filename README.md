@@ -117,7 +117,8 @@ cd Interactive-Sustainability-Dashboard
      ```bash
      cd backend
      npm install
-     npm run start
+     npm run build
+     npm start
      ```
    - The backend will be available at `http://localhost:5000`.
 
@@ -126,7 +127,8 @@ cd Interactive-Sustainability-Dashboard
      ```bash
      cd frontend
      npm install
-     npm run dev
+     npm run build
+     npx serve out
      ```
    - The frontend will be available at `http://localhost:3000`.
 
@@ -135,25 +137,15 @@ cd Interactive-Sustainability-Dashboard
 ## Deployment
 
 ### Deploying the Frontend (Netlify)
-1. Go to [Netlify](https://www.netlify.com/) and create an account.
-2. Link your GitHub repository to a new site.
-3. Set the build settings:
-   - **Build Command**: `npm run build`
-   - **Publish Directory**: `frontend/.next`
-4. Add environment variables under the "Site Settings" → "Environment Variables":
-   - `NEXT_PUBLIC_BACKEND_URL` → Your backend deployment URL.
+
+https://sustainabilitydashboard3.netlify.app/login/
+
+To test deplyed link:
+Register with a new Gmail ID, eg: test9@gmail.com and a 10-charater password, eg: password123
 
 ### Deploying the Backend (Render)
-1. Go to [Render](https://render.com/) and create an account.
-2. Create a new **Web Service**.
-3. Link your GitHub repository.
-4. Set the build and start commands:
-   - **Build Command**: `npm install && npm run build`
-   - **Start Command**: `node dist/server.js`
-5. Add environment variables in the "Environment" tab:
-   - `PORT`
-   - `JWT_SECRET`
-   - `DATABASE_URL`
+
+https://interactive-sustainability-dashboard-3.onrender.com/auth
 
 ---
 
@@ -171,25 +163,17 @@ cd Interactive-Sustainability-Dashboard
 
 ## Screenshots
 ### Login Page
-![Login Page](frontend/public/img/login-page.png)
+![image](https://github.com/user-attachments/assets/8fe7ee74-1fa0-4050-a098-ccab24e5a1e2)
+
+### Register Page
+![image](https://github.com/user-attachments/assets/201f1162-aa69-44b0-8f1c-ba7f9a012b03)
 
 ### Dashboard
-![Dashboard](frontend/public/img/dashboard.png)
+![image](https://github.com/user-attachments/assets/c9a72d3e-7f15-4450-b55f-5687544b5412)
 
----
+![image](https://github.com/user-attachments/assets/671e4d1c-7f1d-4fca-a330-eed8dfd1db0a)
 
-## Contributing
-Contributions are welcome! Feel free to fork the repository and submit pull requests.
-
----
-
-## License
-This project is licensed under the MIT License.
-
----
-
-## Contact
-For queries, feel free to contact:
-- **Author**: [Sharma Aarohi](https://github.com/SharmaAarohi)
+### Mobile View:
+![WhatsApp Image 2024-11-23 at 00 27 31_55cb493f](https://github.com/user-attachments/assets/e7fcc075-a3a7-43b2-8e14-a781760a65b2)
 
 ---
