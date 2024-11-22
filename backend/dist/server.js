@@ -26,14 +26,17 @@ app.use((0, cors_1.default)({
             callback(new Error('Not allowed by CORS'));
         }
     },
-    methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'], // Allow these HTTP methods
-    allowedHeaders: ['Content-Type', 'Authorization'], // Allow these headers
-    credentials: true, // Allow cookies
+    credentials: true,
 }));
 // Middleware
 app.use(express_1.default.json());
 app.use((req, res, next) => {
-    console.log(`${req.method} request to ${req.url} with body:`, req.body);
+    console.log('Incoming request:', {
+        path: req.path,
+        method: req.method,
+        body: req.body,
+        headers: req.headers,
+    });
     next();
 });
 // Routes

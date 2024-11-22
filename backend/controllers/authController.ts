@@ -4,43 +4,16 @@ import jwt from 'jsonwebtoken';
 import User from '../models/User';
 import { sendResponse } from '../utils/responseHandler';
 
-// Registration controller
-// export const registerUser = async (req: Request, res: Response): Promise<void> => {
-//   const { email, password } = req.body;
-//   console.log('JWT_SECRET:', process.env.JWT_SECRET); // Add this line in registerUser or loginUser
-
-//   try {
-//     // Check if the user already exists
-//     const existingUser = await User.findOne({ where: { email } });
-//     if (existingUser) {
-//       res.status(400).json({ message: 'User already exists' });
-//       return;
-//     }
-
-//     // Hash password
-//     const hashedPassword = await bcrypt.hash(password, 10);
-
-//     // Create user
-//     const newUser = await User.create({ email, password: hashedPassword });
-
-//     // Generate JWT
-//     const token = jwt.sign({ id: newUser.id }, process.env.JWT_SECRET as string, {
-//       expiresIn: '1h',
-//     });
-
-//     res.status(201).json({ message: 'User registered successfully', token });
-//   } catch (error) {
-//     console.error('Error registering user:', error);
-//     res.status(500).json({ message: 'Error registering user', error });
-//   }
-// };
-
-
 export const registerUser = async (req: Request, res: Response): Promise<void> => {
   console.log('Request body:', req.body); // Logs the request payload
   const { email, password } = req.body;
   console.log('JWT_SECRET:', process.env.JWT_SECRET); // Logs JWT_SECRET value
   console.log('Incoming register request:', req.body);
+  if (!email || !password) {
+    console.error('Missing email or password in request:', req.body);
+    res.status(400).json({ message: 'Email and password are required' });
+    return;
+  }
   try {
     console.log('Checking if user exists with email:', email); // Log email being checked
     const existingUser = await User.findOne({ where: { email } });

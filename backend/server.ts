@@ -18,23 +18,28 @@ const allowedOrigins = [
 app.use(
   cors({
     origin: (origin, callback) => {
-      // Allow specific origins or requests without origin (e.g., Postman)
       if (!origin || allowedOrigins.includes(origin)) {
-        callback(null, origin); // Set `Access-Control-Allow-Origin` to match the origin dynamically
+        callback(null, true);
       } else {
         console.error(`Blocked by CORS: ${origin}`);
         callback(new Error('Not allowed by CORS'));
       }
     },
-    credentials: true, // Allow cookies and credentials
+    credentials: true,
   })
 );
+
 
 
 // Middleware
 app.use(express.json());
 app.use((req, res, next) => {
-  console.log(`${req.method} request to ${req.url} with body:`, req.body);
+  console.log('Incoming request:', {
+    path: req.path,
+    method: req.method,
+    body: req.body,
+    headers: req.headers,
+  });
   next();
 });
 
