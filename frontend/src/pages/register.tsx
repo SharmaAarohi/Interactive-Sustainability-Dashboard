@@ -11,6 +11,7 @@ const RegisterPage: React.FC = () => {
   const router = useRouter();
 
   const handleRegister = async (e: React.FormEvent) => {
+    console.log('API URL:', process.env.NEXT_PUBLIC_API_URL);
     e.preventDefault();
   
     if (password !== confirmPassword) {
@@ -19,21 +20,24 @@ const RegisterPage: React.FC = () => {
     }
   
     try {
-      // Example register API call
-      const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/register`, { // Add backend URL
+      console.log('Sending registration request to API:', process.env.NEXT_PUBLIC_API_URL);
+      const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/register`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
+        mode: 'no-cors',
         body: JSON.stringify({ email, password }),
       });
-  
+    
       if (response.ok) {
-        router.push('/login'); // Redirect to login or another page
+        console.log('Registration successful');
+        router.push('/login');
       } else {
         const errorData = await response.json();
+        console.error('Registration Error Details:', errorData);
         setError(errorData.message || 'Registration failed');
       }
     } catch (error) {
-      console.error(error);
+      console.error('Network/Server Error during Registration:', error);
       setError('An error occurred during registration');
     }
   };

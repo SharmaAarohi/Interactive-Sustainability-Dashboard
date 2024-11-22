@@ -12,10 +12,30 @@ const cors_1 = __importDefault(require("cors"));
 dotenv_1.default.config();
 const app = (0, express_1.default)();
 const PORT = process.env.PORT || 5000;
-// Allow requests from the frontend (localhost:3000)
-app.use((0, cors_1.default)({ origin: 'https://sustainabilitydashboard3.netlify.app/' }));
+const allowedOrigins = [
+    'http://localhost:3000', // Local frontend
+    'https://sustainabilitydashboard3.netlify.app', // Deployed frontend
+];
+app.use((0, cors_1.default)({
+    origin: (origin, callback) => {
+        if (!origin || allowedOrigins.includes(origin)) {
+            callback(null, true);
+        }
+        else {
+            console.error(`Blocked by CORS: ${origin}`);
+            callback(new Error('Not allowed by CORS'));
+        }
+    },
+    methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'], // Allow these HTTP methods
+    allowedHeaders: ['Content-Type', 'Authorization'], // Allow these headers
+    credentials: true, // Allow cookies
+}));
 // Middleware
 app.use(express_1.default.json());
+app.use((req, res, next) => {
+    console.log(`${req.method} request to ${req.url} with body:`, req.body);
+    next();
+});
 // Routes
 app.use('/auth', authRoutes_1.default);
 // Database connection and server start

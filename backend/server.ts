@@ -10,12 +10,33 @@ dotenv.config();
 const app = express();
 const PORT = process.env.PORT || 5000;
 
-// Allow requests from the frontend (localhost:3000)
-app.use(cors({ origin: 'https://sustainabilitydashboard3.netlify.app/' }));
+const allowedOrigins = [
+  'http://localhost:3000', // Local frontend
+  'https://sustainabilitydashboard3.netlify.app', // Deployed frontend
+];
+
+app.use(
+  cors({
+    origin: (origin, callback) => {
+      // Allow specific origins or requests without origin (e.g., Postman)
+      if (!origin || allowedOrigins.includes(origin)) {
+        callback(null, origin); // Set `Access-Control-Allow-Origin` to match the origin dynamically
+      } else {
+        console.error(`Blocked by CORS: ${origin}`);
+        callback(new Error('Not allowed by CORS'));
+      }
+    },
+    credentials: true, // Allow cookies and credentials
+  })
+);
+
 
 // Middleware
 app.use(express.json());
-
+app.use((req, res, next) => {
+  console.log(`${req.method} request to ${req.url} with body:`, req.body);
+  next();
+});
 
 // Routes
 app.use('/auth', authRoutes);
