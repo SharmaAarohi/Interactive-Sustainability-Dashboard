@@ -178,7 +178,8 @@ https://interactive-sustainability-dashboard-3.onrender.com/auth
 ![Screenshot 2024-11-19 033327](https://github.com/user-attachments/assets/6b07a49b-0803-40b7-8a08-951ecf4fabf8)
 
 ### Export as CSV function:
-![Screenshot 2024-11-19 033406](https://github.com/user-attachments/assets/1dc08fbe-ea36-4fcc-a94e-c43e37c81c5)
+
+![Screenshot 2024-11-19 033406](https://github.com/user-attachments/assets/b1b4ab46-22d4-4ac5-b4a2-edad7be363e7)
 
 ### Export as PDF Function:
 
