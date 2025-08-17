@@ -1,7 +1,7 @@
 # Interactive Sustainability Dashboard
 
 ## About the Project
-SustainTrack focused on helping industrial companies measure and improve their sustainability metrics. This project is an **Interactive Sustainability Dashboard** designed to:
+SustainTrack focuses on helping industrial companies measure and improve their sustainability metrics. This project is an **Interactive Sustainability Dashboard** designed to:
 - Provide insights into sustainability metrics like **carbon emissions**, **water usage**, and **waste generated**.
 - Allow users to input, view, filter, and export sustainability data.
 - Compare user data with **industry benchmarks** for actionable insights.
